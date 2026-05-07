@@ -655,6 +655,11 @@ body.has-hero .navbar:not(.scrolled) .navbar-toggler-icon {
     align-items: center;
 }
 
+.navbar .navbar-nav > .nav-item {
+    display: flex;
+    align-items: center;
+}
+
 .navbar .nav-item.ms-lg-3 {
     margin-left: 0 !important;
 }
@@ -688,6 +693,11 @@ body.has-hero .navbar:not(.scrolled) .navbar-toggler-icon {
 .navbar .nav-link {
     margin-top: 0;
     margin-bottom: 0;
+}
+
+.navbar .auth-actions,
+.navbar .d-flex.gap-2 {
+    align-items: center;
 }
 
 .navbar .btn.btn-primary-custom {
@@ -1548,6 +1558,7 @@ html[data-theme="light"] body.has-hero .navbar:not(.scrolled) .offcanvas .rtl-to
 
     .navbar .offcanvas.offcanvas-xl .nav-item {
         width: auto !important;
+        margin-top: 0 !important;
     }
 
     .navbar .offcanvas.offcanvas-xl .nav-link {
@@ -1573,6 +1584,10 @@ html[data-theme="light"] body.has-hero .navbar:not(.scrolled) .offcanvas .rtl-to
     .navbar .offcanvas.offcanvas-xl .theme-toggle,
     .navbar .offcanvas.offcanvas-xl .rtl-toggle {
         width: auto;
+    }
+
+    .navbar .nav-item:last-child {
+        margin-top: 0 !important;
     }
 }
 
