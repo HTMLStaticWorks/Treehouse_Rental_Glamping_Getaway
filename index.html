@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treehouse Rental & Glamping Getaway | Stay Above The Ordinary</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Experience luxury treehouses and glamping in nature. Book your eco-friendly nature retreat today.">
+    <meta name="keywords" content="treehouse rental, glamping, nature retreat, eco tourism, luxury cabin">
+    <meta property="og:title" content="Treehouse Rental & Glamping Getaway">
+    <meta property="og:description" content="Stay above the ordinary in our luxury eco-treehouses.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&q=80&w=1200">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="has-hero">
+
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-tree-fill"></i>
+                <span>TREETOPS</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title">Menu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+                        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        
+                        <li class="nav-item ms-lg-3 d-flex gap-2">
+                            <button id="theme-toggle" class="theme-toggle"><i class="bi bi-moon-fill"></i></button>
+                            <button id="rtl-toggle" class="rtl-toggle">RTL</button>
+                        </li>
+                        
+                        <li class="nav-item ms-lg-3">
+                            <a href="booking.html" class="btn btn-primary-custom">Book Now</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section" style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;">
+        <div class="container hero-content text-center">
+            <h1 class="hero-title animate-on-scroll">Stay Above The Ordinary</h1>
+            <p class="hero-subtitle animate-on-scroll">Luxury Treehouses & Glamping in Nature</p>
+            <div class="d-flex justify-content-center gap-3 animate-on-scroll">
+                <a href="booking.html" class="btn btn-accent-custom btn-lg">Book Your Stay</a>
+                <a href="services.html" class="btn btn-outline-custom btn-lg">Explore Cabins</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Stays -->
+    <section class="py-5">
+        <div class="container py-5">
+            <div class="row mb-5 text-center">
+                <div class="col-lg-6 mx-auto animate-on-scroll">
+                    <h2 class="mb-3">Featured Treehouses</h2>
+                    <p class="text-muted">Handpicked luxury stays designed for ultimate comfort and immersion in nature.</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Stay 1 -->
+                <div class="col-md-4">
+                    <div class="stay-card glass-card h-100">
+                        <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=600" class="card-img-top" alt="Cedar Nest">
+                        <div class="card-body">
+                            <h3 class="h4">The Cedar Nest</h3>
+                            <p class="text-muted">A cozy retreat high in the canopy with panoramic forest views.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold text-primary">$250 / night</span>
+                                <a href="service-details.html" class="text-accent fw-bold">Details <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Stay 2 -->
+                <div class="col-md-4">
+                    <div class="stay-card glass-card h-100">
+                        <img src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?w=600" class="card-img-top" alt="Oak Observatory">
+                        <div class="card-body">
+                            <h3 class="h4">Oak Observatory</h3>
+                            <p class="text-muted">Perfect for star gazing with a retractable roof and luxury amenities.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold text-primary">$320 / night</span>
+                                <a href="service-details.html" class="text-accent fw-bold">Details <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Stay 3 -->
+                <div class="col-md-4">
+                    <div class="stay-card glass-card h-100">
+                        <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=600" class="card-img-top" alt="Pine Pavilion">
+                        <div class="card-body">
+                            <h3 class="h4">Pine Pavilion</h3>
+                            <p class="text-muted">Modern architecture meets rustic charm in this spacious family stay.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold text-primary">$450 / night</span>
+                                <a href="service-details.html" class="text-accent fw-bold">Details <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="bg-primary py-5 text-white">
+        <div class="container py-5">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <h2 class="mb-4">Why Escape With Us?</h2>
+                    <div class="d-flex gap-3 mb-4">
+                        <div class="bg-accent p-3 rounded-circle d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                            <i class="bi bi-shield-check fs-3"></i>
+                        </div>
+                        <div>
+                            <h4>Eco-Friendly Stays</h4>
+                            <p class="opacity-75">We prioritize sustainability without compromising on luxury.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex gap-3 mb-4">
+                        <div class="bg-accent p-3 rounded-circle d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                            <i class="bi bi-geo-alt fs-3"></i>
+                        </div>
+                        <div>
+                            <h4>Secret Locations</h4>
+                            <p class="opacity-75">Our treehouses are hidden deep in private, pristine forests.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex gap-3">
+                        <div class="bg-accent p-3 rounded-circle d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                            <i class="bi bi-stars fs-3"></i>
+                        </div>
+                        <div>
+                            <h4>Premium Service</h4>
+                            <p class="opacity-75">24/7 concierge to ensure your stay is magical.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1542718610-a1d656d1884c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="img-fluid rounded-5 shadow-lg" alt="Forest View">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Luxury Amenities -->
+    <section class="py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5 animate-on-scroll">
+                <h2>Elevated Comfort</h2>
+                <p class="text-muted">Everything you need for a perfect escape, thousands of feet above the mundane.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4 col-lg-2">
+                    <div class="amenity-card">
+                        <i class="bi bi-wifi"></i>
+                        <h4 class="h6">Fast Wi-Fi</h4>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-2">
+                    <div class="amenity-card">
+                        <i class="bi bi-cup-hot"></i>
+                        <h4 class="h6">Organic Coffee</h4>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-2">
+                    <div class="amenity-card">
+                        <i class="bi bi-thermometer-high"></i>
+                        <h4 class="h6">Hot Tub</h4>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-2">
+                    <div class="amenity-card">
+                        <i class="bi bi-fire"></i>
+                        <h4 class="h6">Fire Pit</h4>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-2">
+                    <div class="amenity-card">
+                        <i class="bi bi-moon-stars"></i>
+                        <h4 class="h6">Telescope</h4>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-2">
+                    <div class="amenity-card">
+                        <i class="bi bi-bicycle"></i>
+                        <h4 class="h6">E-Bikes</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nature Adventures -->
+    <section class="py-5 bg-light">
+        <div class="container py-5">
+            <div class="row mb-5 align-items-end">
+                <div class="col-lg-6">
+                    <h2>Discover Your Wild Side</h2>
+                    <p class="text-muted mb-0">Immerse yourself in the surrounding wilderness with our curated local experiences.</p>
+                </div>
+                <div class="col-lg-6 text-lg-end">
+                    <a href="services.html" class="btn btn-outline-custom">View All Activities</a>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="adventure-card">
+                        <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="adventure-img" alt="Hiking">
+                        <div class="adventure-overlay">
+                            <h3>Canopy Hiking</h3>
+                            <p>Explore hidden trails that wind through the ancient giants.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="adventure-card">
+                        <img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="adventure-img" alt="Kayaking">
+                        <div class="adventure-overlay">
+                            <h3>Lakeside Kayaking</h3>
+                            <p>Paddle through crystal clear waters under the morning mist.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-4">
+                    <div class="adventure-card">
+                        <img src="https://images.unsplash.com/photo-1545389336-cf090694435e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="adventure-img" alt="Meditation">
+                        <div class="adventure-overlay">
+                            <h3>Forest Meditation</h3>
+                            <p>Find your inner peace with guided sessions deep in the woods.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5 animate-on-scroll">
+                <h2>Guest Stories</h2>
+                <p class="text-muted">Unforgettable memories shared by our forest explorers.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="testimonial-card">
+                        <i class="bi bi-quote quote-icon"></i>
+                        <p class="mb-4">"Waking up to the sound of birds and the smell of pine was the most therapeutic experience of my life. Truly magical!"</p>
+                        <div class="d-flex align-items-center">
+                            <img src="https://i.pravatar.cc/150?u=a042581f4e29026704d" class="guest-img" alt="Sarah J.">
+                            <div>
+                                <h5 class="mb-0">Sarah Jenkins</h5>
+                                <small class="text-muted">Stayed at The Cedar Nest</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="testimonial-card">
+                        <i class="bi bi-quote quote-icon"></i>
+                        <p class="mb-4">"The star gazing from the Oak Observatory is unmatched. We saw the Milky Way so clearly! Every detail was perfect."</p>
+                        <div class="d-flex align-items-center">
+                            <img src="https://i.pravatar.cc/150?u=a042581f4e29026704c" class="guest-img" alt="Marcus T.">
+                            <div>
+                                <h5 class="mb-0">Marcus Thorne</h5>
+                                <small class="text-muted">Stayed at Oak Observatory</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="testimonial-card">
+                        <i class="bi bi-quote quote-icon"></i>
+                        <p class="mb-4">"Luxury meets nature in the best way possible. The treehouse had all modern comforts but felt like a true escape."</p>
+                        <div class="d-flex align-items-center">
+                            <img src="https://i.pravatar.cc/150?u=a042581f4e29026704b" class="guest-img" alt="Elena R.">
+                            <div>
+                                <h5 class="mb-0">Elena Rodriguez</h5>
+                                <small class="text-muted">Stayed at Pine Pavilion</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visual Journey (Gallery Snippet) -->
+    <section class="py-5 bg-light">
+        <div class="container py-5">
+            <div class="text-center mb-5 animate-on-scroll">
+                <h2>A Visual Journey</h2>
+                <p class="text-muted">Catch a glimpse of the magic waiting for you.</p>
+            </div>
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800" alt="Majestic Mountains">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800" alt="Forest Canopy">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?w=800" alt="Cozy Winter Cabin">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800" alt="Serene Nature Lake">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1542718610-a1d656d1884c?w=800" alt="Hidden Forest Stay">
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="gallery.html" class="btn btn-primary-custom">View Full Gallery</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <div class="cta-glass animate-on-scroll">
+                        <h2 class="display-4 fw-bold mb-4 text-white">Ready to Leave the Ground?</h2>
+                        <p class="lead mb-5 opacity-90">Book your luxury treehouse escape today and experience nature like never before. Limited dates available for this season.</p>
+                        <div class="d-flex justify-content-center gap-3">
+                            <a href="booking.html" class="btn btn-accent-custom btn-lg">Check Availability</a>
+                            <a href="contact.html" class="btn btn-outline-light btn-lg border-2" style="border-radius: 50px;">Talk to Concierge</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-wave">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" style="fill: var(--primary);">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="footer-brand mb-3">
+                        <i class="bi bi-tree-fill"></i>
+                        <span>TREETOPS</span>
+                    </div>
+                    <p class="opacity-75">Redefining luxury through nature. Experience the ultimate glamping and treehouse retreats designed for the modern explorer.</p>
+                    <div class="d-flex gap-3 mt-4">
+                        <a href="#" class="text-white fs-4"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white fs-4"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-white fs-4"><i class="bi bi-twitter-x"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <h5 class="mb-4">Quick Links</h5>
+                    <a href="about.html" class="footer-link">About Us</a>
+                    <a href="services.html" class="footer-link">Our Services</a>
+                    <a href="blog.html" class="footer-link">Nature Blog</a>
+                    <a href="contact.html" class="footer-link">Contact</a>
+                </div>
+                <div class="col-lg-2">
+                    <h5 class="mb-4">Stay Options</h5>
+                    <a href="#" class="footer-link">Luxury Treehouses</a>
+                    <a href="#" class="footer-link">Glamping Tents</a>
+                    <a href="#" class="footer-link">Family Retreats</a>
+                    <a href="#" class="footer-link">Romantic Stays</a>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="mb-4">Newsletter</h5>
+                    <p class="opacity-75">Subscribe to get secret deals and nature tips.</p>
+                    <form class="mt-3">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Your Email">
+                            <button class="btn btn-accent-custom" type="button">Join</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <hr class="mt-5 opacity-25">
+            <div class="text-center mt-4">
+                <p class="opacity-50 small mb-0">&copy; 2026 Treetops Luxury Rentals. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <a href="#" id="back-to-top" class="back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

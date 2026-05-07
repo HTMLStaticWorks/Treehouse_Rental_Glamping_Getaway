@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nature Escapes | Home 2 | Treehouse Rental & Glamping</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Escape into nature with our romantic packages and family retreats.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="has-hero">
+
+    <!-- Header (Same as index.html) -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-tree-fill"></i>
+                <span>TREETOPS</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title">Menu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="home-2.html">Home 2</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        <li class="nav-item ms-lg-3 d-flex gap-2">
+                            <button id="theme-toggle" class="theme-toggle"><i class="bi bi-moon-fill"></i></button>
+                            <button id="rtl-toggle" class="rtl-toggle">RTL</button>
+                        </li>
+                        <li class="nav-item ms-lg-3">
+                            <a href="booking.html" class="btn btn-primary-custom">Book Now</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section 2 -->
+    <section class="hero-section" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1500076656116-558758c991c1?auto=format&fit=crop&q=80&w=1920') center/cover no-repeat fixed;">
+        <div class="container hero-content text-center">
+            <h1 class="hero-title animate-on-scroll">Escape Into Nature</h1>
+            <p class="hero-subtitle animate-on-scroll">Unplug and rediscover the world from above.</p>
+            <div class="animate-on-scroll">
+                <a href="#packages" class="btn btn-accent-custom btn-lg">Explore Packages</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Romantic Packages -->
+    <section id="packages" class="py-5">
+        <div class="container py-5">
+            <div class="row mb-5 text-center">
+                <div class="col-lg-6 mx-auto">
+                    <span class="text-accent fw-bold text-uppercase">Exclusive Deals</span>
+                    <h2 class="text-primary h1 mt-2">Romantic Packages</h2>
+                    <p class="text-muted">Specially curated experiences for couples looking for a magical getaway.</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="glass-card p-4 h-100 d-flex flex-column justify-content-center">
+                        <h3>Sunset & Champagne</h3>
+                        <p>Enjoy a private terrace dinner with premium champagne as the sun dips below the horizon. Includes a 2-night stay in our luxury Cedar Nest.</p>
+                        <ul class="list-unstyled mb-4">
+                            <li><i class="bi bi-check-circle-fill text-accent me-2"></i> Private 3-course dinner</li>
+                            <li><i class="bi bi-check-circle-fill text-accent me-2"></i> Bottle of vintage champagne</li>
+                            <li><i class="bi bi-check-circle-fill text-accent me-2"></i> Spa treatment for two</li>
+                        </ul>
+                        <div class="mt-auto">
+                            <a href="booking.html" class="btn btn-primary-custom">Book from $599</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&q=80&w=800" class="img-fluid rounded-5 shadow" alt="Romantic Dinner">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Family Retreats -->
+    <section class="py-5 bg-light-subtle">
+        <div class="container py-5">
+            <div class="row mb-5 text-center">
+                <div class="col-lg-6 mx-auto">
+                    <h2 class="text-primary h1">Family Nature Retreats</h2>
+                    <p class="text-muted">Adventure and bonding for the whole family in our spacious forest lodges.</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="stay-card glass-card h-100">
+                        <img src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?auto=format&fit=crop&q=80&w=600" class="card-img-top" alt="Glamping Tent">
+                        <div class="card-body">
+                            <h3 class="h5">Family Glamping Safari</h3>
+                            <p class="text-muted small">Extra large tents with bunk beds and campfire pits.</p>
+                            <a href="service-details.html" class="btn btn-outline-custom btn-sm">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="stay-card glass-card h-100">
+                        <img src="https://images.unsplash.com/photo-1542718610-a1d656d1884c?auto=format&fit=crop&q=80&w=600" class="card-img-top" alt="Treehouse">
+                        <div class="card-body">
+                            <h3 class="h5">The Grand Lodge</h3>
+                            <p class="text-muted small">Our largest treehouse featuring 3 bedrooms and a full kitchen.</p>
+                            <a href="service-details.html" class="btn btn-outline-custom btn-sm">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="stay-card glass-card h-100">
+                        <img src="https://images.unsplash.com/photo-1501555088652-021faa106b9b?auto=format&fit=crop&q=80&w=600" class="card-img-top" alt="Nature Walk">
+                        <div class="card-body">
+                            <h3 class="h5">Adventure Pass</h3>
+                            <p class="text-muted small">Includes guided hikes, ziplining, and canoe rentals.</p>
+                            <a href="service-details.html" class="btn btn-outline-custom btn-sm">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nature's Amenities -->
+    <section class="py-5">
+        <div class="container py-5">
+            <div class="row mb-5 text-center">
+                <div class="col-lg-6 mx-auto">
+                    <span class="text-accent fw-bold text-uppercase">Thoughtful Details</span>
+                    <h2 class="h1 mt-2">Curated for Comfort</h2>
+                    <p class="text-muted">Every stay includes these premium touches to make your escape seamless and serene.</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="amenity-card h-100 d-flex flex-column align-items-center justify-content-center animate-on-scroll">
+                        <i class="bi bi-stars"></i>
+                        <h4 class="h5">Panoramic Decks</h4>
+                        <p class="text-muted small">Private wrap-around balconies with unobstructed forest views.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="amenity-card h-100 d-flex flex-column align-items-center justify-content-center animate-on-scroll">
+                        <i class="bi bi-cup-hot"></i>
+                        <h4 class="h5">Local Pantry</h4>
+                        <p class="text-muted small">Complimentary basket of organic coffee, tea, and local honey.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="amenity-card h-100 d-flex flex-column align-items-center justify-content-center animate-on-scroll">
+                        <i class="bi bi-moon-stars"></i>
+                        <h4 class="h5">Stargazing Kits</h4>
+                        <p class="text-muted small">High-powered telescopes and star maps in every unit.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="amenity-card h-100 d-flex flex-column align-items-center justify-content-center animate-on-scroll">
+                        <i class="bi bi-droplet"></i>
+                        <h4 class="h5">Eco-Spa Products</h4>
+                        <p class="text-muted small">Handcrafted, biodegradable bath and body care essentials.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wilderness Experiences -->
+    <section class="py-5 bg-primary text-white overflow-hidden">
+        <div class="container py-5">
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6">
+                    <span class="text-accent fw-bold text-uppercase">Beyond the Stay</span>
+                    <h2 class="h1 mt-2 text-white">Wilderness Experiences</h2>
+                    <p class="opacity-75">Connect with the land through our expert-led adventures designed to awaken your senses.</p>
+                </div>
+                <div class="col-lg-6 text-lg-end">
+                    <a href="services.html" class="btn btn-accent-custom">View All Activities</a>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="adventure-card animate-on-scroll">
+                        <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&q=80&w=600" class="adventure-img" alt="Canopy Tour">
+                        <div class="adventure-overlay">
+                            <h4 class="h3 mb-2">Guided Canopy Tours</h4>
+                            <p class="small opacity-75">Walk among the birds on our suspended rope bridges.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="adventure-card animate-on-scroll">
+                        <img src="https://images.unsplash.com/photo-1502134249126-9f3755a50d78?auto=format&fit=crop&q=80&w=600" class="adventure-img" alt="Photography">
+                        <div class="adventure-overlay">
+                            <h4 class="h3 mb-2">Night Sky Photography</h4>
+                            <p class="small opacity-75">Capture the Milky Way with our professional photographers.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="adventure-card animate-on-scroll">
+                        <img src="https://images.unsplash.com/photo-1501183007986-d0d080b147f9?auto=format&fit=crop&q=80&w=600" class="adventure-img" alt="Foraging">
+                        <div class="adventure-overlay">
+                            <h4 class="h3 mb-2">Wild Foraging</h4>
+                            <p class="small opacity-75">Discover edible plants and mushrooms with a local herbalist.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="adventure-card animate-on-scroll">
+                        <img src="https://images.unsplash.com/photo-1545389336-cf090694435e?auto=format&fit=crop&q=80&w=600" class="adventure-img" alt="Forest Meditation">
+                        <div class="adventure-overlay">
+                            <h4 class="h3 mb-2">Forest Meditation</h4>
+                            <p class="small opacity-75">Find your inner peace with guided sessions deep in the woods.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Steps Timeline -->
+    <section class="py-5">
+        <div class="container py-5">
+            <h2 class="text-center text-primary mb-5">Your Journey Starts Here</h2>
+            <div class="row g-4">
+                <div class="col-md-3 text-center">
+                    <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3" style="width: 80px; height: 80px;">
+                        <span class="fs-2 fw-bold">1</span>
+                    </div>
+                    <h4>Pick Your Cabin</h4>
+                    <p class="text-muted">Choose from our unique treehouses or glamping tents.</p>
+                </div>
+                <div class="col-md-3 text-center">
+                    <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3" style="width: 80px; height: 80px;">
+                        <span class="fs-2 fw-bold">2</span>
+                    </div>
+                    <h4>Choose Dates</h4>
+                    <p class="text-muted">Check availability and pick your perfect escape window.</p>
+                </div>
+                <div class="col-md-3 text-center">
+                    <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3" style="width: 80px; height: 80px;">
+                        <span class="fs-2 fw-bold">3</span>
+                    </div>
+                    <h4>Customise</h4>
+                    <p class="text-muted">Add experiences like campfire dinners or spa days.</p>
+                </div>
+                <div class="col-md-3 text-center">
+                    <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3" style="width: 80px; height: 80px;">
+                        <span class="fs-2 fw-bold">4</span>
+                    </div>
+                    <h4>Relax & Stay</h4>
+                    <p class="text-muted">Pack your bags and prepare for an unforgettable retreat.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guest Reviews -->
+    <section class="py-5 bg-light-subtle">
+        <div class="container py-5">
+            <div class="row mb-5 text-center">
+                <div class="col-lg-6 mx-auto">
+                    <span class="text-accent fw-bold text-uppercase">Guest Stories</span>
+                    <h2 class="h1 mt-2">Heartfelt Memories</h2>
+                    <p class="text-muted">Read about the magical experiences our guests have shared in the treetops.</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="testimonial-card animate-on-scroll">
+                        <i class="bi bi-quote quote-icon"></i>
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=100" class="guest-img" alt="Guest">
+                            <div>
+                                <h5 class="mb-0 h6">Sarah Jenkins</h5>
+                                <div class="text-accent small">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mb-0 text-muted italic">"The most peaceful 3 days of my life. Waking up to the sound of birds and the rustling leaves was absolutely therapeutic."</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="testimonial-card animate-on-scroll">
+                        <i class="bi bi-quote quote-icon"></i>
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=100" class="guest-img" alt="Guest">
+                            <div>
+                                <h5 class="mb-0 h6">Mark Thompson</h5>
+                                <div class="text-accent small">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mb-0 text-muted italic">"A perfect blend of luxury and nature. The stargazing kit was a highlight for our kids. We'll definitely be back next year!"</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="testimonial-card animate-on-scroll">
+                        <i class="bi bi-quote quote-icon"></i>
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=100" class="guest-img" alt="Guest">
+                            <div>
+                                <h5 class="mb-0 h6">Elena Rodriguez</h5>
+                                <div class="text-accent small">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mb-0 text-muted italic">"Romantic, secluded, and stunningly designed. The gourmet picnic basket delivered to our door was such a thoughtful touch."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Same as index.html) -->
+    <footer>
+        <div class="footer-wave">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" style="fill: var(--primary);">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="footer-brand mb-3">
+                        <i class="bi bi-tree-fill"></i>
+                        <span>TREETOPS</span>
+                    </div>
+                    <p class="opacity-75">Redefining luxury through nature. Experience the ultimate glamping and treehouse retreats designed for the modern explorer.</p>
+                </div>
+                <div class="col-lg-2">
+                    <h5 class="mb-4">Quick Links</h5>
+                    <a href="about.html" class="footer-link">About Us</a>
+                    <a href="services.html" class="footer-link">Our Services</a>
+                    <a href="blog.html" class="footer-link">Nature Blog</a>
+                    <a href="contact.html" class="footer-link">Contact</a>
+                </div>
+                <div class="col-lg-2">
+                    <h5 class="mb-4">Stay Options</h5>
+                    <a href="#" class="footer-link">Luxury Treehouses</a>
+                    <a href="#" class="footer-link">Glamping Tents</a>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="mb-4">Newsletter</h5>
+                    <form class="mt-3">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Your Email">
+                            <button class="btn btn-accent-custom" type="button">Join</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <hr class="mt-5 opacity-25">
+            <div class="text-center mt-4">
+                <p class="opacity-50 small mb-0">&copy; 2026 Treetops Luxury Rentals. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" id="back-to-top" class="back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
