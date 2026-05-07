@@ -45,15 +45,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- 3. Navbar Scroll Effect ---
     const navbar = document.querySelector('.navbar');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-    });
+    if (navbar) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    }
 
-    // --- 4. Back to Top Button ---
+    // --- 4. Keep Offcanvas Closed On Desktop ---
+    const offcanvasElement = document.getElementById('offcanvasNavbar');
+    if (offcanvasElement && window.bootstrap && bootstrap.Offcanvas) {
+        const offcanvasInstance = bootstrap.Offcanvas.getOrCreateInstance(offcanvasElement);
+        const syncOffcanvasState = () => {
+            if (window.innerWidth >= 1200) {
+                offcanvasInstance.hide();
+            }
+        };
+
+        window.addEventListener('resize', syncOffcanvasState);
+        syncOffcanvasState();
+    }
+
+    // --- 5. Back to Top Button ---
     const backToTop = document.getElementById('back-to-top');
     window.addEventListener('scroll', () => {
         if (window.scrollY > 500) {
@@ -70,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- 5. Intersection Observer for Animations ---
+    // --- 6. Intersection Observer for Animations ---
     const observerOptions = {
         threshold: 0.1
     };
@@ -88,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 
-    // --- 6. Basic Calendar UI Placeholder ---
+    // --- 7. Basic Calendar UI Placeholder ---
     // This is a simple logic to show how a calendar might interact
     const calendarDays = document.querySelectorAll('.calendar-day');
     calendarDays.forEach(day => {
@@ -98,7 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- 7. Form Validation (Simple) ---
+    // --- 8. Form Validation (Simple) ---
     const forms = document.querySelectorAll('.needs-validation');
     Array.from(forms).forEach(form => {
         form.addEventListener('submit', event => {
