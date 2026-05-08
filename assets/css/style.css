@@ -1599,6 +1599,18 @@ html[data-theme="light"] body.has-hero .navbar:not(.scrolled) .offcanvas .nav-li
 }
 
 html[data-theme="dark"] .navbar .offcanvas .nav-link,
+html[data-theme="dark"] body.has-hero .navbar:not(.scrolled) .offcanvas .nav-link {
+    color: #F3F4F6 !important;
+    text-shadow: none !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+}
+
+.navbar .offcanvas .nav-link:hover,
+.navbar .offcanvas .nav-link.active {
+    transform: none;
+}
+
 /* --- Consolidated Responsive Navigation (lg and up) --- */
 @media (min-width: 992px) {
     .navbar .navbar-toggler {
@@ -1695,6 +1707,7 @@ html[data-theme="dark"] .navbar .offcanvas .nav-link,
         display: flex !important;
         flex-direction: column !important;
         gap: 0.85rem !important;
+        width: 100% !important;
     }
 
     .navbar .nav-item {
