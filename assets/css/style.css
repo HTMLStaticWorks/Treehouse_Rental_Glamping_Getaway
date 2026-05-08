@@ -1768,3 +1768,55 @@ html[data-theme="dark"] body.has-hero .navbar:not(.scrolled) .offcanvas .nav-lin
         max-width: 140px;
     }
 }
+
+/* Final hard override for mobile offcanvas menu links */
+html[data-theme="light"] .navbar .offcanvas .navbar-nav > .nav-item > .nav-link,
+html[data-theme="light"] body.has-hero .navbar .offcanvas .navbar-nav > .nav-item > .nav-link,
+html[data-theme="dark"] .navbar .offcanvas .navbar-nav > .nav-item > .nav-link,
+html[data-theme="dark"] body.has-hero .navbar .offcanvas .navbar-nav > .nav-item > .nav-link {
+    display: flex !important;
+    align-items: center !important;
+    width: 100% !important;
+    min-height: 48px !important;
+    padding: 0.85rem 1rem !important;
+    margin: 0 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    white-space: normal !important;
+    text-shadow: none !important;
+    position: relative !important;
+    background: rgba(20, 83, 45, 0.08) !important;
+    border: 1px solid rgba(20, 83, 45, 0.16) !important;
+    border-radius: 12px !important;
+    color: #14532D !important;
+}
+
+html[data-theme="dark"] .navbar .offcanvas .navbar-nav > .nav-item > .nav-link,
+html[data-theme="dark"] body.has-hero .navbar .offcanvas .navbar-nav > .nav-item > .nav-link {
+    background: rgba(255, 255, 255, 0.08) !important;
+    border-color: rgba(255, 255, 255, 0.12) !important;
+    color: #F3F4F6 !important;
+}
+
+html[data-theme="light"] .navbar .offcanvas .navbar-nav > .nav-item > .nav-link:hover,
+html[data-theme="light"] .navbar .offcanvas .navbar-nav > .nav-item > .nav-link.active,
+html[data-theme="light"] body.has-hero .navbar .offcanvas .navbar-nav > .nav-item > .nav-link:hover,
+html[data-theme="light"] body.has-hero .navbar .offcanvas .navbar-nav > .nav-item > .nav-link.active {
+    background: var(--primary) !important;
+    color: #FFFFFF !important;
+}
+
+html[data-theme="dark"] .navbar .offcanvas .navbar-nav > .nav-item > .nav-link:hover,
+html[data-theme="dark"] .navbar .offcanvas .navbar-nav > .nav-item > .nav-link.active,
+html[data-theme="dark"] body.has-hero .navbar .offcanvas .navbar-nav > .nav-item > .nav-link:hover,
+html[data-theme="dark"] body.has-hero .navbar .offcanvas .navbar-nav > .nav-item > .nav-link.active {
+    background: rgba(255, 255, 255, 0.16) !important;
+    color: #FFFFFF !important;
+}
+
+html[data-theme="light"] .navbar .offcanvas .navbar-nav > .nav-item.d-flex,
+html[data-theme="light"] .navbar .offcanvas .auth-actions,
+html[data-theme="dark"] .navbar .offcanvas .navbar-nav > .nav-item.d-flex,
+html[data-theme="dark"] .navbar .offcanvas .auth-actions {
+    margin-top: 1rem !important;
+}
