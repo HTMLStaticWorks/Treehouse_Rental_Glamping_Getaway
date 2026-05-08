@@ -39,7 +39,7 @@
         .pricing-table td:last-child { border-radius: 0 15px 15px 0; }
     </style>
 </head>
-<body class="has-hero">
+<body class="has-hero pricing-page">
 
     <nav class="navbar navbar-expand-xl fixed-top">
         <div class="container">
@@ -64,19 +64,16 @@
                         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
                         <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="pricing.html">Pricing</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="pricing.html" aria-current="page">Pricing</a></li>
                         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                        <li class="nav-item ms-lg-3 d-flex auth-actions">
-                            <a href="login.html" class="btn btn-outline-custom btn-sm nav-auth-btn">Login</a>
-                        </li>
-                        
                         <li class="nav-item ms-lg-3 d-flex gap-2">
                             <button id="theme-toggle" class="theme-toggle"><i class="bi bi-moon-fill"></i></button>
                             <button id="rtl-toggle" class="rtl-toggle">RTL</button>
                         </li>
                         
-                        <li class="nav-item ms-lg-3">
+                        <li class="nav-item ms-lg-4 d-flex auth-actions">
                             <a href="booking.html" class="btn btn-primary-custom">Book Now</a>
+                            <a href="login.html" class="btn btn-outline-custom btn-sm nav-auth-btn">Login</a>
                         </li>
                     </ul>
                 </div>
@@ -227,15 +224,17 @@
     </section>
 
     <!-- Packages -->
-    <section class="py-5 bg-primary text-white">
+    <section class="py-5 pricing-packages-section">
         <div class="container py-5">
             <h2 class="text-center mb-5">Curated Packages</h2>
             <div class="row g-4">
                 <div class="col-lg-4">
-                    <div class="glass-card p-4 h-100">
-                        <h3 class="text-accent">Romantic Getaway</h3>
-                        <p class="h4 mb-4">$599 <span class="fs-6 opacity-75">/ 2 nights</span></p>
-                        <ul class="list-unstyled mb-4 opacity-75">
+                    <div class="glass-card pricing-package-card p-4 h-100">
+                        <div class="package-header">
+                            <h3 class="package-title">Romantic Getaway</h3>
+                        </div>
+                        <p class="h4 mb-4 package-price">$599 <span class="fs-6 package-duration">/ 2 nights</span></p>
+                        <ul class="list-unstyled mb-4 package-features">
                             <li class="mb-2"><i class="bi bi-check2 me-2"></i> Cedar Nest Stay</li>
                             <li class="mb-2"><i class="bi bi-check2 me-2"></i> Champagne on Arrival</li>
                             <li class="mb-2"><i class="bi bi-check2 me-2"></i> Private Dinner</li>
@@ -245,11 +244,13 @@
                     </div>
                 </div>
                 <div class="col-lg-4">
-                    <div class="glass-card p-4 h-100 border-accent" style="border-width: 2px;">
-                        <span class="badge bg-accent mb-2">Most Popular</span>
-                        <h3 class="text-accent">Adventure Week</h3>
-                        <p class="h4 mb-4">$899 <span class="fs-6 opacity-75">/ 4 nights</span></p>
-                        <ul class="list-unstyled mb-4 opacity-75">
+                    <div class="glass-card pricing-package-card p-4 h-100 border-accent featured-package" style="border-width: 2px;">
+                        <div class="package-header">
+                            <span class="badge bg-accent mb-2">Most Popular</span>
+                            <h3 class="package-title">Adventure Week</h3>
+                        </div>
+                        <p class="h4 mb-4 package-price">$899 <span class="fs-6 package-duration">/ 4 nights</span></p>
+                        <ul class="list-unstyled mb-4 package-features">
                             <li class="mb-2"><i class="bi bi-check2 me-2"></i> Glamping or Treehouse</li>
                             <li class="mb-2"><i class="bi bi-check2 me-2"></i> All Adventure Passes</li>
                             <li class="mb-2"><i class="bi bi-check2 me-2"></i> Guided Hikes</li>
@@ -259,10 +260,12 @@
                     </div>
                 </div>
                 <div class="col-lg-4">
-                    <div class="glass-card p-4 h-100">
-                        <h3 class="text-accent">Wellness Retreat</h3>
-                        <p class="h4 mb-4">$650 <span class="fs-6 opacity-75">/ 3 nights</span></p>
-                        <ul class="list-unstyled mb-4 opacity-75">
+                    <div class="glass-card pricing-package-card p-4 h-100">
+                        <div class="package-header">
+                            <h3 class="package-title">Wellness Retreat</h3>
+                        </div>
+                        <p class="h4 mb-4 package-price">$650 <span class="fs-6 package-duration">/ 3 nights</span></p>
+                        <ul class="list-unstyled mb-4 package-features">
                             <li class="mb-2"><i class="bi bi-check2 me-2"></i> Any Luxury Stay</li>
                             <li class="mb-2"><i class="bi bi-check2 me-2"></i> Daily Yoga Sessions</li>
                             <li class="mb-2"><i class="bi bi-check2 me-2"></i> Organic Meal Plan</li>

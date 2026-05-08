@@ -18,11 +18,11 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body class="d-flex align-items-center justify-content-center min-vh-100 bg-light-subtle" style="background: linear-gradient(rgba(6, 95, 70, 0.55), rgba(6, 95, 70, 0.55)), url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&q=80&w=1920') center/cover no-repeat;">
+<body class="auth-page d-flex align-items-center justify-content-center min-vh-100 bg-light-subtle" style="background: linear-gradient(rgba(6, 95, 70, 0.55), rgba(6, 95, 70, 0.55)), url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&q=80&w=1920') center/cover no-repeat;">
 
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-5">
+            <div class="col-12 col-md-8 col-lg-5">
                 <div class="glass-card p-5">
                     <div class="text-center mb-4">
                         <a href="index.html" class="navbar-brand fs-2 mb-3 d-inline-block">
@@ -32,6 +32,18 @@
                         <h3>Welcome Back</h3>
                         <p class="text-muted small">Sign in to manage your bookings and saved stays.</p>
                     </div>
+
+                    <div class="social-auth-grid mb-3">
+                        <button type="button" class="social-auth-btn google">
+                            <span class="social-auth-mark">G</span>
+                            <span>Google</span>
+                        </button>
+                        <button type="button" class="social-auth-btn apple">
+                            <i class="bi bi-apple"></i>
+                            <span>Apple</span>
+                        </button>
+                    </div>
+                    <div class="social-auth-divider">or continue with email</div>
 
                     <form action="#" method="post" class="needs-validation" novalidate>
                         <div class="mb-3">
