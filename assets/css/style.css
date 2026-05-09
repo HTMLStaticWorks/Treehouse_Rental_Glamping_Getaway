@@ -47,10 +47,29 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Explicit Theme Overrides for Text Contrast */
-[data-theme="light"] h1, [data-theme="light"] h2, [data-theme="light"] h3, 
-[data-theme="light"] h4, [data-theme="light"] h5, [data-theme="light"] h6 {
+[data-theme="light"] h1:not(.hero-title), 
+[data-theme="light"] h2:not(.hero-title), 
+[data-theme="light"] h3, 
+[data-theme="light"] h4, 
+[data-theme="light"] h5, 
+[data-theme="light"] h6 {
     color: #14532D !important;
 }
+
+/* Force hero section content to be white across all themes for contrast */
+.hero-section h1,
+.hero-section h2,
+.hero-section h3,
+.hero-section h4,
+.hero-section h5,
+.hero-section h6,
+.hero-section p,
+.hero-section span,
+.hero-title,
+.hero-subtitle {
+    color: #FFFFFF !important;
+}
+
 
 [data-theme="dark"] h1, [data-theme="dark"] h2, [data-theme="dark"] h3, 
 [data-theme="dark"] h4, [data-theme="dark"] h5, [data-theme="dark"] h6 {
@@ -724,10 +743,21 @@ body.has-hero .navbar:not(.scrolled) .navbar-toggler-icon {
     padding: 0 16px;
 }
 
-.navbar .theme-toggle,
+.navbar .theme-toggle {
+    width: 40px !important;
+    height: 40px !important;
+    min-width: 40px !important;
+    max-width: 40px !important;
+    flex: 0 0 40px !important;
+    padding: 0 !important;
+}
+
 .navbar .rtl-toggle {
-    width: 40px;
-    height: 40px;
+    width: auto !important;
+    height: 40px !important;
+    min-width: 40px !important;
+    flex-shrink: 0 !important;
+    padding: 0 14px !important;
 }
 
 .hero-content {
@@ -789,6 +819,39 @@ footer {
     padding: 100px 0 50px;
     position: relative;
 }
+
+@media (max-width: 991px) {
+    footer {
+        text-align: center !important;
+    }
+    
+    footer .footer-brand {
+        display: flex !important;
+        justify-content: center !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    footer .d-flex {
+        justify-content: center !important;
+    }
+    
+    footer .col-lg-2, 
+    footer .col-lg-4 {
+        margin-bottom: 2.5rem;
+    }
+
+    footer .footer-link {
+        text-align: center !important;
+        width: 100% !important;
+    }
+
+    footer .footer-social-link {
+        margin: 0 5px !important;
+    }
+}
+
+
 
 footer h2, footer h5, footer p {
     color: white !important;
@@ -1345,7 +1408,7 @@ section.bg-dark p, section.bg-dark span, section.bg-dark li, section.bg-dark .te
     --bg-card: #FFFFFF;
     --text-main: #111827;
     --text-muted: #4B5563;
-    --text-primary-dynamic: #14532D;
+    --text-primary-dynamic: #000000;
     --glass-bg: rgba(255, 255, 255, 0.82);
     --glass-border: rgba(20, 83, 45, 0.10);
     --shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
@@ -1417,7 +1480,7 @@ html[data-theme="light"] body {
 
 html[data-theme="light"] .navbar.scrolled,
 html[data-theme="light"] body:not(.has-hero) .navbar {
-    background: rgba(255, 255, 255, 0.94);
+    background: #FFFFFF !important;
     border-bottom: 1px solid rgba(20, 83, 45, 0.08);
     box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
     backdrop-filter: blur(18px);
@@ -1445,7 +1508,7 @@ html[data-theme="light"] .navbar-toggler {
 
 html[data-theme="light"] body.has-hero .navbar:not(.scrolled),
 html[data-theme="light"] .navbar {
-    background: rgba(255, 255, 255, 0.92);
+    background: #FFFFFF !important;
     border-bottom: 1px solid rgba(20, 83, 45, 0.08);
     box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
     backdrop-filter: blur(18px);
@@ -1592,7 +1655,7 @@ html[data-theme="light"] .back-to-top {
 
 html[data-theme="light"] .navbar .offcanvas .nav-link,
 html[data-theme="light"] body.has-hero .navbar:not(.scrolled) .offcanvas .nav-link {
-    color: #14532D !important;
+    color: #000000 !important;
     text-shadow: none !important;
     background: rgba(20, 83, 45, 0.08) !important;
     border: 1px solid rgba(20, 83, 45, 0.16) !important;
@@ -1669,7 +1732,7 @@ html[data-theme="dark"] body.has-hero .navbar:not(.scrolled) .offcanvas .nav-lin
     }
 
     body.has-hero .navbar:not(.scrolled) .nav-link {
-        color: white !important;
+        color: #000000 !important;
     }
 
     .navbar .auth-actions,
@@ -1683,9 +1746,7 @@ html[data-theme="dark"] body.has-hero .navbar:not(.scrolled) .offcanvas .nav-lin
     }
 
     .navbar .nav-auth-btn,
-    .navbar .btn.btn-primary-custom,
-    .navbar .theme-toggle,
-    .navbar .rtl-toggle {
+    .navbar .btn.btn-primary-custom {
         width: auto !important;
         min-height: auto !important;
     }
@@ -1723,7 +1784,7 @@ html[data-theme="dark"] body.has-hero .navbar:not(.scrolled) .offcanvas .nav-lin
         align-items: center;
         padding: 0.85rem 1.25rem !important;
         margin: 0 !important;
-        color: var(--primary) !important;
+        color: #000000 !important;
         background: rgba(20, 83, 45, 0.06) !important;
         border: 1px solid rgba(20, 83, 45, 0.12) !important;
         border-radius: 12px;
@@ -1752,9 +1813,7 @@ html[data-theme="dark"] body.has-hero .navbar:not(.scrolled) .offcanvas .nav-lin
     }
 
     .navbar .nav-auth-btn,
-    .navbar .btn.btn-primary-custom,
-    .navbar .theme-toggle,
-    .navbar .rtl-toggle {
+    .navbar .btn.btn-primary-custom {
         width: 100% !important;
         min-height: 48px;
         justify-content: center;
@@ -1762,11 +1821,7 @@ html[data-theme="dark"] body.has-hero .navbar:not(.scrolled) .offcanvas .nav-lin
         align-items: center;
     }
 
-    .navbar .theme-toggle,
-    .navbar .rtl-toggle {
-        width: 50% !important;
-        max-width: 140px;
-    }
+    
 }
 
 /* Final hard override for mobile offcanvas menu links */
@@ -1788,7 +1843,7 @@ html[data-theme="dark"] body.has-hero .navbar .offcanvas .navbar-nav > .nav-item
     background: rgba(20, 83, 45, 0.08) !important;
     border: 1px solid rgba(20, 83, 45, 0.16) !important;
     border-radius: 12px !important;
-    color: #14532D !important;
+    color: #000000 !important;
 }
 
 html[data-theme="dark"] .navbar .offcanvas .navbar-nav > .nav-item > .nav-link,
@@ -1819,4 +1874,235 @@ html[data-theme="light"] .navbar .offcanvas .auth-actions,
 html[data-theme="dark"] .navbar .offcanvas .navbar-nav > .nav-item.d-flex,
 html[data-theme="dark"] .navbar .offcanvas .auth-actions {
     margin-top: 1rem !important;
+}
+
+/* --- Navbar Background Standardization --- */
+/* Forces a solid white background and high-contrast text for all pages, themes, and scroll states */
+
+.navbar,
+.navbar.scrolled,
+html[data-theme="light"] .navbar,
+html[data-theme="dark"] .navbar,
+html[data-theme="light"] body.has-hero .navbar:not(.scrolled),
+html[data-theme="dark"] body.has-hero .navbar:not(.scrolled) {
+    background: #FFFFFF !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border-bottom: 1px solid rgba(20, 83, 45, 0.1) !important;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08) !important;
+    padding: 8px 0 !important;
+}
+
+/* Ensure all navbar text/icons are dark for readability on white background */
+.navbar .navbar-brand,
+.navbar .navbar-brand span,
+.navbar .navbar-brand i,
+.navbar .nav-link,
+.navbar .theme-toggle,
+.navbar .rtl-toggle,
+.navbar .navbar-toggler,
+.navbar .offcanvas .nav-link,
+.navbar .offcanvas .offcanvas-title {
+    color: #000000 !important; /* Pure Black as requested */
+    text-shadow: none !important;
+    opacity: 1 !important;
+    filter: none !important;
+}
+
+.navbar .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+/* Specific Toggler Backgrounds on White */
+.navbar .theme-toggle,
+.navbar .rtl-toggle,
+.navbar .navbar-toggler {
+    background: rgba(0, 0, 0, 0.04) !important;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Link Hover/Active States */
+.navbar .nav-link:hover,
+.navbar .nav-link.active,
+.navbar .offcanvas .nav-link:hover,
+.navbar .offcanvas .nav-link.active {
+    color: #B45309 !important; /* Dark Amber remains for brand identity */
+}
+
+/* Auth Buttons on White Navbar */
+.navbar .nav-auth-btn.btn-outline-custom {
+    border-color: #000000 !important;
+    color: #000000 !important;
+}
+
+
+.navbar .nav-auth-btn.btn-outline-custom:hover {
+    background: #14532D !important;
+    color: #FFFFFF !important;
+}
+
+/* Specific fix for Tablet and Mobile view text colors */
+@media (max-width: 1199.98px) {
+    .navbar .nav-link,
+    .navbar .offcanvas .nav-link,
+    .navbar .offcanvas .offcanvas-title,
+    .navbar .navbar-brand,
+    .navbar .navbar-brand span,
+    .navbar .theme-toggle,
+    .navbar .rtl-toggle {
+        color: #000000 !important;
+        text-shadow: none !important;
+    }
+    
+    .navbar .offcanvas {
+        background-color: #ffffff !important;
+    }
+}
+
+/* ==============================================
+   FINAL NAVBAR OVERRIDES — Scoped Correctly
+   ============================================== */
+
+/* 1. Non-hero pages & scrolled state → clean white navbar */
+body:not(.has-hero) .navbar,
+.navbar.scrolled {
+    background: #FFFFFF !important;
+    background-color: #FFFFFF !important;
+    backdrop-filter: blur(18px) !important;
+    -webkit-backdrop-filter: blur(18px) !important;
+    border-bottom: 1px solid rgba(20, 83, 45, 0.1) !important;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* 2. Non-hero + scrolled → dark readable text */
+body:not(.has-hero) .navbar .nav-link,
+body:not(.has-hero) .navbar .navbar-brand,
+body:not(.has-hero) .navbar .navbar-brand span,
+body:not(.has-hero) .navbar .navbar-brand i,
+body:not(.has-hero) .navbar .theme-toggle,
+body:not(.has-hero) .navbar .rtl-toggle,
+body:not(.has-hero) .navbar .navbar-toggler,
+body:not(.has-hero) .navbar .offcanvas-title,
+.navbar.scrolled .nav-link,
+.navbar.scrolled .navbar-brand,
+.navbar.scrolled .navbar-brand span,
+.navbar.scrolled .navbar-brand i,
+.navbar.scrolled .theme-toggle,
+.navbar.scrolled .rtl-toggle,
+.navbar.scrolled .offcanvas-title {
+    color: #1a1a1a !important;
+    text-shadow: none !important;
+    opacity: 1 !important;
+}
+
+/* 3. Hero page navbar (not scrolled) → transparent over dark image, white text */
+body.has-hero .navbar:not(.scrolled) {
+    background: linear-gradient(to bottom, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.1) 100%) !important;
+    background-color: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+}
+
+body.has-hero .navbar:not(.scrolled) .nav-link,
+body.has-hero .navbar:not(.scrolled) .navbar-brand,
+body.has-hero .navbar:not(.scrolled) .navbar-brand span,
+body.has-hero .navbar:not(.scrolled) .navbar-brand i,
+body.has-hero .navbar:not(.scrolled) .theme-toggle,
+body.has-hero .navbar:not(.scrolled) .rtl-toggle,
+body.has-hero .navbar:not(.scrolled) .navbar-toggler,
+body.has-hero .navbar:not(.scrolled) .offcanvas-title {
+    color: #FFFFFF !important;
+    text-shadow: 0 1px 8px rgba(0,0,0,0.5) !important;
+    opacity: 1 !important;
+}
+
+/* 4. Toggle button backgrounds on hero (not scrolled) */
+body.has-hero .navbar:not(.scrolled) .theme-toggle,
+body.has-hero .navbar:not(.scrolled) .rtl-toggle {
+    background: rgba(255,255,255,0.18) !important;
+    border-color: rgba(255,255,255,0.3) !important;
+}
+
+/* 5. Toggle button backgrounds on non-hero / scrolled */
+body:not(.has-hero) .navbar .theme-toggle,
+body:not(.has-hero) .navbar .rtl-toggle,
+.navbar.scrolled .theme-toggle,
+.navbar.scrolled .rtl-toggle {
+    background: rgba(20, 83, 45, 0.07) !important;
+    border-color: rgba(20, 83, 45, 0.18) !important;
+}
+
+/* 6. Book Now & Login buttons — always consistent */
+.navbar .btn-primary-custom {
+    background-color: #14532D !important;
+    color: #FFFFFF !important;
+    border: none !important;
+}
+
+.navbar .btn-outline-custom {
+    border-color: #14532D !important;
+    color: #14532D !important;
+}
+
+body.has-hero .navbar:not(.scrolled) .btn-outline-custom {
+    border-color: rgba(255,255,255,0.8) !important;
+    color: #FFFFFF !important;
+}
+
+/* 7. Dark theme — non-hero navbar */
+[data-theme="dark"] body:not(.has-hero) .navbar,
+[data-theme="dark"] .navbar.scrolled {
+    background: rgba(15, 23, 42, 0.97) !important;
+    border-bottom: 1px solid rgba(255,255,255,0.08) !important;
+}
+
+[data-theme="dark"] body:not(.has-hero) .navbar .nav-link,
+[data-theme="dark"] body:not(.has-hero) .navbar .navbar-brand,
+[data-theme="dark"] body:not(.has-hero) .navbar .navbar-brand span,
+[data-theme="dark"] body:not(.has-hero) .navbar .theme-toggle,
+[data-theme="dark"] body:not(.has-hero) .navbar .rtl-toggle,
+[data-theme="dark"] .navbar.scrolled .nav-link,
+[data-theme="dark"] .navbar.scrolled .navbar-brand,
+[data-theme="dark"] .navbar.scrolled .theme-toggle,
+[data-theme="dark"] .navbar.scrolled .rtl-toggle {
+    color: #F3F4F6 !important;
+    text-shadow: none !important;
+}
+
+/* ================================================================
+   DEFINITIVE LIGHT MODE NAV LINK COLOR FIX — Must be last in file
+   Forces all nav link text to dark/visible in light (bright) mode.
+   Hero page (not scrolled) keeps white text over dark image overlay.
+   ================================================================ */
+
+/* All navbars, light mode — dark visible text */
+html[data-theme="light"] .navbar .navbar-nav .nav-link,
+html[data-theme="light"] .navbar .navbar-nav .nav-link span,
+html[data-theme="light"] .navbar .navbar-brand,
+html[data-theme="light"] .navbar .navbar-brand span,
+html[data-theme="light"] .navbar .offcanvas-title {
+    color: #1a1a1a !important;
+    text-shadow: none !important;
+    opacity: 1 !important;
+}
+
+/* Exception: Home 1 hero (transparent navbar over dark image) — keep white */
+html[data-theme="light"] body.has-hero .navbar:not(.scrolled) .navbar-nav .nav-link,
+html[data-theme="light"] body.has-hero .navbar:not(.scrolled) .navbar-brand,
+html[data-theme="light"] body.has-hero .navbar:not(.scrolled) .navbar-brand span,
+html[data-theme="light"] body.has-hero .navbar:not(.scrolled) .offcanvas-title {
+    color: #FFFFFF !important;
+    text-shadow: 0 1px 8px rgba(0,0,0,0.55) !important;
+}
+
+/* Scrolled state on any page (light mode) — always dark */
+html[data-theme="light"] .navbar.scrolled .navbar-nav .nav-link,
+html[data-theme="light"] .navbar.scrolled .navbar-brand,
+html[data-theme="light"] .navbar.scrolled .navbar-brand span {
+    color: #1a1a1a !important;
+    text-shadow: none !important;
 }
