@@ -11,48 +11,89 @@
         })();
     </script>
     <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login | Arboria</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
-    <style>
+        <style>
         body {
-            background: radial-gradient(circle at center, #264b3c 0%, #1a2f26 100%);
-            background-size: cover;
-            height: 100vh;
+            background: #f4f7f4;
+            min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             padding: 20px;
         }
-        .login-card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+        .auth-card {
+            background: #ffffff;
+            border: 1px solid rgba(0, 0, 0, 0.08);
             border-radius: 20px;
             padding: 40px;
             width: 100%;
             max-width: 450px;
-            color: white;
+            color: var(--dark);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
         }
         .form-control {
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            color: white;
+            background: #f8f9fa;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            color: var(--dark);
         }
         .form-control:focus {
-            background: rgba(255, 255, 255, 0.2);
+            background: #ffffff;
             border-color: var(--accent);
-            color: white;
+            color: var(--dark);
             box-shadow: none;
         }
-        .form-control::placeholder { color: rgba(255,255,255,0.6); }
-        .navbar-brand { justify-content: center; width: 100%; }
+        .form-control::placeholder { color: rgba(0,0,0,0.4); }
+        .navbar-brand { justify-content: center; width: 100%; color: var(--primary) !important; }
+        
+        .social-btn {
+            color: var(--dark);
+            border-color: rgba(0,0,0,0.1);
+        }
+        .social-btn:hover {
+            background: rgba(0,0,0,0.05);
+            color: var(--dark);
+        }
+
+        /* Dark Mode Overrides */
+        [data-theme="dark"] body {
+            background: radial-gradient(circle at center, #264b3c 0%, #1a2f26 100%);
+        }
+        [data-theme="dark"] .auth-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            border-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        }
+        [data-theme="dark"] .form-control {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+        [data-theme="dark"] .form-control:focus {
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+        }
+        [data-theme="dark"] .form-control::placeholder { color: rgba(255,255,255,0.6); }
+        [data-theme="dark"] .navbar-brand { color: white !important; }
+        [data-theme="dark"] .text-muted, [data-theme="dark"] .opacity-75 { color: rgba(255,255,255,0.75) !important; opacity: 1 !important; }
+        [data-theme="dark"] .social-btn {
+            color: white;
+            border-color: rgba(255,255,255,0.2);
+        }
+        [data-theme="dark"] .social-btn:hover {
+            background: rgba(255,255,255,0.1);
+            color: white;
+        }
     </style>
 </head>
 <body>
-    <div class="login-card shadow-lg">
+    <div class="auth-card">
         <div class="text-center mb-5">
             <a href="index.html" class="navbar-brand text-white fs-2 fw-bold d-flex">
                 <i class="bi bi-tree-fill text-accent"></i> ARBORIA
@@ -73,7 +114,7 @@
                     <input type="checkbox" class="form-check-input" id="rememberMe">
                     <label class="form-check-label small opacity-75" for="rememberMe">Remember Me</label>
                 </div>
-                <a href="#" class="small text-accent text-decoration-none fw-bold">Forgot Password?</a>
+                <a href="#" class="small text-accent text-decoration-none fw-bold text-nowrap ms-2">Forgot Password?</a>
             </div>
             <a href="dashboard.html" class="btn btn-primary w-100 py-3 fw-bold mb-4">Sign In</a>
             <div class="text-center">
@@ -82,12 +123,12 @@
             <hr class="my-4 opacity-25">
             <div class="row g-2">
                 <div class="col-6">
-                    <button type="button" class="btn btn-outline-light w-100 btn-sm py-2 d-flex align-items-center justify-content-center">
+                    <button type="button" class="btn btn-outline-dark social-btn w-100 btn-sm py-2 d-flex align-items-center justify-content-center">
                         <i class="bi bi-google me-2"></i> Google
                     </button>
                 </div>
                 <div class="col-6">
-                    <button type="button" class="btn btn-outline-light w-100 btn-sm py-2 d-flex align-items-center justify-content-center">
+                    <button type="button" class="btn btn-outline-dark social-btn w-100 btn-sm py-2 d-flex align-items-center justify-content-center">
                         <i class="bi bi-apple me-2"></i> Apple
                     </button>
                 </div>
@@ -96,3 +137,5 @@
     </div>
 </body>
 </html>
+
+

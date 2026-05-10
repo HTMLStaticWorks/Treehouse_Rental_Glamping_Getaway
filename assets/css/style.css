@@ -67,6 +67,35 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 0.9 !important;
 }
 
+/* ── Force all headings & body text white inside .bg-primary sections ──
+   The global h1-h6 rule sets color: var(--primary) which is the SAME
+   dark green as .bg-primary → invisible text. Override here globally. */
+.bg-primary h1,
+.bg-primary h2,
+.bg-primary h3,
+.bg-primary h4,
+.bg-primary h5,
+.bg-primary h6 {
+    color: #ffffff !important;
+}
+
+.bg-primary p,
+.bg-primary li,
+.bg-primary span:not(.text-accent) {
+    color: rgba(255, 255, 255, 0.88) !important;
+}
+
+/* Keep accent text golden inside .bg-primary */
+.bg-primary .text-accent {
+    color: var(--accent) !important;
+}
+
+/* Opacity utility on .bg-primary should stay high-contrast */
+.bg-primary .opacity-75 {
+    color: rgba(255, 255, 255, 0.85) !important;
+    opacity: 1 !important;
+}
+
 .bg-arboria, .bg-primary {
     background-color: var(--primary) !important;
 }
