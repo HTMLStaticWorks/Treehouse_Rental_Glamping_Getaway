@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiences | Arboria Luxury Retreats</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    <style>
+        .exp-img {
+            height: 500px;
+            object-fit: cover;
+            border-radius: var(--border-radius);
+        }
+        .experiences-hero {
+            height: 60vh;
+            min-height: 400px;
+            background-image: url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&q=80&w=1600');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            position: relative;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><i class="bi bi-tree-fill text-accent"></i><span>ARBORIA</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"><span class="navbar-toggler-icon"></span></button>
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar">
+                <div class="offcanvas-header"><h5 class="offcanvas-title">Menu</h5><button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button></div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="experiences.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                        <li class="nav-item ms-lg-2"><button id="theme-toggle" class="btn btn-link p-0 nav-link"><i class="bi bi-moon-stars"></i></button></li>
+                        <li class="nav-item"><button id="rtl-toggle" class="btn btn-link p-0 nav-link"><i class="bi bi-translate"></i></button></li>
+                        <li class="nav-item ms-lg-3"><a href="booking.html" class="btn btn-primary">Book Now</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <header class="experiences-hero pt-5">
+        <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0,0,0,0.5);"></div>
+        <div class="container py-5 text-center position-relative z-1 text-white">
+            <h1 class="display-3 fw-bold mt-4 text-white">Unforgettable Experiences</h1>
+            <p class="lead opacity-75 text-white">Beyond the stay. Immerse yourself in the magic of the wild.</p>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <!-- Experience 1 -->
+            <div class="row align-items-center mb-5 pb-5">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?auto=format&fit=crop&q=80&w=1200" class="exp-img w-100 shadow" alt="Campfire">
+                </div>
+                <div class="col-lg-6">
+                    <div class="ps-lg-5">
+                        <h6 class="text-accent fw-bold text-uppercase">Nightlife</h6>
+                        <h2 class="display-5 mb-4">Campfire Under the Stars</h2>
+                        <p class="text-muted mb-4">Gather around the crackling fire as the sun sets. We provide everything you need for the perfect evening: premium firewood, gourmet s'mores kits, and local artisanal ciders.</p>
+                        <a href="#" class="btn btn-outline-primary">Book Experience</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Experience 2 -->
+            <div class="row align-items-center mb-5 pb-5 flex-row-reverse">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&q=80&w=1200" class="exp-img w-100 shadow" alt="Hiking">
+                </div>
+                <div class="col-lg-6">
+                    <div class="pe-lg-5">
+                        <h6 class="text-accent fw-bold text-uppercase">Adventure</h6>
+                        <h2 class="display-5 mb-4">Guided Forest Treks</h2>
+                        <p class="text-muted mb-4">Discover the hidden secrets of the Arboria forest with our expert guides. Learn about the local flora and fauna while exploring untouched paths and breathtaking viewpoints.</p>
+                        <a href="#" class="btn btn-outline-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Experience 3 -->
+            <div class="row align-items-center mb-5 pb-5">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=1200" class="exp-img w-100 shadow" alt="Wellness">
+                </div>
+                <div class="col-lg-6">
+                    <div class="ps-lg-5">
+                        <h6 class="text-accent fw-bold text-uppercase">Wellness</h6>
+                        <h2 class="display-5 mb-4">Forest Yoga & Spa</h2>
+                        <p class="text-muted mb-4">Rejuvenate your spirit with an outdoor yoga session or a private massage treatment on your treehouse deck. Breathe in the pure forest air and find your inner peace.</p>
+                        <a href="#" class="btn btn-outline-primary">View Packages</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Experience 4 -->
+            <div class="row align-items-center mb-5 pb-5 flex-row-reverse">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=1200" class="exp-img w-100 shadow" alt="Dining">
+                </div>
+                <div class="col-lg-6">
+                    <div class="pe-lg-5">
+                        <h6 class="text-accent fw-bold text-uppercase">Culinary</h6>
+                        <h2 class="display-5 mb-4">Gourmet Canopy Dining</h2>
+                        <p class="text-muted mb-4">Enjoy a private, multi-course dinner crafted by our executive forest chef. Savor locally-sourced organic ingredients paired with fine wines, all while elevated 30 feet in the canopy.</p>
+                        <a href="#" class="btn btn-outline-primary">Reserve a Table</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Experience 5 -->
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&q=80&w=1200" class="exp-img w-100 shadow" alt="Wildlife">
+                </div>
+                <div class="col-lg-6">
+                    <div class="ps-lg-5">
+                        <h6 class="text-accent fw-bold text-uppercase">Exploration</h6>
+                        <h2 class="display-5 mb-4">Wildlife Photography Tour</h2>
+                        <p class="text-muted mb-4">Join a professional nature photographer on an early morning excursion. Learn to capture the perfect shot of the forest's elusive wildlife in stunning natural light.</p>
+                        <a href="#" class="btn btn-outline-primary">Book Tour</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <a class="navbar-brand text-white mb-4" href="index.html">
+                        <i class="bi bi-tree-fill text-accent"></i>
+                        <span>ARBORIA</span>
+                    </a>
+                    <p class="opacity-75 pe-lg-5">Escape to a world of tranquility and luxury. Arboria offers the most unique forest stays for those seeking peace and adventure.</p>
+                    <div class="d-flex gap-3 mt-4">
+                        <a href="#" class="btn btn-sm btn-outline-light rounded-circle"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="btn btn-sm btn-outline-light rounded-circle"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="btn btn-sm btn-outline-light rounded-circle"><i class="bi bi-twitter-x"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-2">
+                    <h5>Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">Our Story</a></li>
+                        <li><a href="cabins.html">The Cabins</a></li>
+                        <li><a href="experiences.html">Experiences</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-lg-2">
+                    <h5>Support</h5>
+                    <ul class="footer-links">
+                        <li><a href="faq.html">FAQs</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="booking.html">Booking Policy</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-lg-4">
+                    <h5>Newsletter</h5>
+                    <p class="opacity-75">Subscribe to get the latest updates and exclusive offers.</p>
+                    <form class="mt-4">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Email address">
+                            <button class="btn btn-primary" type="button">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <hr class="my-5 opacity-25">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0 opacity-75">&copy; 2026 Arboria Luxury Retreats. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" height="25" class="me-3" alt="Paypal">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" height="20" class="me-3" alt="Visa">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" height="25" alt="Mastercard">
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

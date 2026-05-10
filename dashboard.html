@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guest Dashboard | Arboria</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <style>
+        #wrapper { overflow-x: hidden; display: flex; }
+        #sidebar-wrapper { min-height: 100vh; width: 280px; transition: margin .25s ease-out; background: var(--primary); color: white; }
+        #page-content-wrapper { width: 100%; min-width: 0; background-color: #f8f9fa; }
+        .sidebar-heading { padding: 2rem 1.25rem; font-size: 1.5rem; font-family: 'Poppins', sans-serif; }
+        .list-group-item { border: none; padding: 1rem 1.25rem; background: transparent; color: rgba(255,255,255,0.7); transition: var(--transition); }
+        .list-group-item:hover, .list-group-item.active { background: rgba(255,255,255,0.1); color: white; border-left: 4px solid var(--accent); }
+        .dash-card { border: none; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <div class="sidebar-heading fw-bold"><i class="bi bi-tree-fill text-accent"></i> ARBORIA</div>
+            <div class="list-group list-group-flush">
+                <a href="#" class="list-group-item list-group-item-action active"><i class="bi bi-speedometer2 me-2"></i> Dashboard</a>
+                <a href="#" class="list-group-item list-group-item-action"><i class="bi bi-calendar-check me-2"></i> My Bookings</a>
+                <a href="#" class="list-group-item list-group-item-action"><i class="bi bi-heart me-2"></i> Wishlist</a>
+                <a href="#" class="list-group-item list-group-item-action"><i class="bi bi-chat-dots me-2"></i> Messages</a>
+                <a href="#" class="list-group-item list-group-item-action"><i class="bi bi-person-gear me-2"></i> Profile Settings</a>
+                <a href="index.html" class="list-group-item list-group-item-action mt-5"><i class="bi bi-box-arrow-left me-2"></i> Logout</a>
+            </div>
+        </div>
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom py-3">
+                <div class="container-fluid">
+                    <button class="btn btn-outline-primary" id="sidebar-toggle"><i class="bi bi-list"></i></button>
+                    <div class="ms-auto d-flex align-items-center gap-3">
+                        <button class="btn btn-link text-dark"><i class="bi bi-bell fs-5"></i></button>
+                        <div class="d-flex align-items-center gap-2">
+                            <img src="https://ui-avatars.com/api/?name=John+Doe&background=264b3c&color=fff" class="rounded-circle" width="35">
+                            <span class="fw-bold">John Doe</span>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="container-fluid p-4">
+                <div class="row g-4 mb-4">
+                    <div class="col-md-8">
+                        <h2 class="fw-bold mb-1">Welcome back, John!</h2>
+                        <p class="text-muted">You have 1 upcoming reservation this month.</p>
+                    </div>
+                    <div class="col-md-4 text-md-end">
+                        <a href="cabins.html" class="btn btn-primary">Book New Stay</a>
+                    </div>
+                </div>
+
+                <div class="row g-4">
+                    <!-- Stat Card 1 -->
+                    <div class="col-md-4">
+                        <div class="dash-card card p-4">
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <h6 class="text-muted">Total Spent</h6>
+                                    <h3 class="mb-0 fw-bold">$4,520</h3>
+                                </div>
+                                <div class="bg-light p-3 rounded-3 text-primary"><i class="bi bi-wallet2 fs-4"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Stat Card 2 -->
+                    <div class="col-md-4">
+                        <div class="dash-card card p-4">
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <h6 class="text-muted">Nights Stayed</h6>
+                                    <h3 class="mb-0 fw-bold">12</h3>
+                                </div>
+                                <div class="bg-light p-3 rounded-3 text-primary"><i class="bi bi-moon-stars fs-4"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Stat Card 3 -->
+                    <div class="col-md-4">
+                        <div class="dash-card card p-4">
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <h6 class="text-muted">Reward Points</h6>
+                                    <h3 class="mb-0 fw-bold">2,450</h3>
+                                </div>
+                                <div class="bg-light p-3 rounded-3 text-accent"><i class="bi bi-star-fill fs-4"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h4 class="fw-bold mt-5 mb-4">Upcoming Reservation</h4>
+                <div class="dash-card card overflow-hidden">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="assets/images/cabin-1.png" class="img-fluid h-100" style="object-fit: cover;">
+                        </div>
+                        <div class="col-md-8 p-4">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div>
+                                    <span class="badge bg-success mb-2">Confirmed</span>
+                                    <h3>The Sequoia Suite</h3>
+                                    <p class="text-muted mb-4"><i class="bi bi-calendar3 me-2"></i> May 20 - May 25, 2026 (5 Nights)</p>
+                                </div>
+                                <div class="text-end">
+                                    <button class="btn btn-sm btn-outline-danger res-action" data-action="cancelled">Cancel</button>
+                                    <button class="btn btn-sm btn-primary res-action" data-action="modified">Modify</button>
+                                </div>
+                            </div>
+                            <div class="row border-top pt-3 g-3">
+                                <div class="col-6 col-md-3">
+                                    <span class="small text-muted d-block">Guests</span>
+                                    <span class="fw-bold">2 Adults</span>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <span class="small text-muted d-block">Total Paid</span>
+                                    <span class="fw-bold">$1,776.50</span>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <span class="small text-muted d-block">Booking ID</span>
+                                    <span class="fw-bold">ARB-99421</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/dashboard.js"></script>
+    <script>
+        document.getElementById('sidebar-toggle').addEventListener('click', () => {
+            document.getElementById('wrapper').classList.toggle('toggled');
+        });
+    </script>
+</body>
+</html>

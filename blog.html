@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journal | Arboria Luxury Retreats</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <style>
+        .blog-hero {
+            height: 60vh;
+            min-height: 400px;
+            background-image: url('https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?auto=format&fit=crop&q=80&w=1600');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            position: relative;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><i class="bi bi-tree-fill text-accent"></i><span>ARBORIA</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"><span class="navbar-toggler-icon"></span></button>
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar">
+                <div class="offcanvas-header"><h5 class="offcanvas-title">Menu</h5><button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button></div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="experiences.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                        <li class="nav-item ms-lg-2"><button id="theme-toggle" class="btn btn-link p-0 nav-link"><i class="bi bi-moon-stars"></i></button></li>
+                        <li class="nav-item"><button id="rtl-toggle" class="btn btn-link p-0 nav-link"><i class="bi bi-translate"></i></button></li>
+                        <li class="nav-item ms-lg-3"><a href="booking.html" class="btn btn-primary">Book Now</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <header class="blog-hero pt-5">
+        <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0,0,0,0.5);"></div>
+        <div class="container py-5 text-center position-relative z-1 text-white">
+            <h1 class="display-3 fw-bold mt-4 text-white">The Arboria Journal</h1>
+            <p class="lead opacity-75 text-white">Stories of nature, wellness, and adventure.</p>
+        </div>
+    </header>
+
+    <!-- Section 1: Featured Article -->
+    <section class="py-5 mt-4">
+        <div class="container">
+            <div class="card border-0 shadow-lg rounded-4 overflow-hidden">
+                <div class="row g-0">
+                    <div class="col-md-6">
+                        <img src="https://images.unsplash.com/photo-1542718610-a1d656d1884c?auto=format&fit=crop&q=80&w=1200" class="img-fluid h-100 object-fit-cover" alt="Featured Architecture" style="min-height: 400px; object-fit: cover;">
+                    </div>
+                    <div class="col-md-6 d-flex align-items-center">
+                        <div class="card-body p-lg-5 p-4">
+                            <div class="mb-2"><span class="badge bg-arboria text-white text-uppercase py-2 px-3 fw-bold" style="font-size: 0.7rem; letter-spacing: 1px;">Featured • May 12, 2026</span></div>
+                            <h2 class="card-title display-6 fw-bold mb-3">The Architecture of Treehouses: Blending In</h2>
+                            <p class="text-muted mb-4">An exclusive interview with our lead architect on how we designed luxury cabins that adapt to the natural sway of the trees, minimizing our footprint while maximizing comfort...</p>
+                            <a href="blog-details.html" class="btn btn-primary">Read Full Story</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Recent Stories -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h3 class="mb-4 fw-bold">Recent Stories</h3>
+            <div class="row g-4">
+                <!-- Blog 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100">
+                        <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&q=80&w=800" class="card-img-top" style="height: 250px; object-fit: cover;">
+                        <div class="card-body p-4">
+                            <div class="mb-2"><span class="badge bg-arboria text-white text-uppercase py-2 px-3 fw-bold" style="font-size: 0.7rem; letter-spacing: 1px;">Eco-Travel • May 10, 2026</span></div>
+                            <h4 class="card-title mb-3"><a href="blog-details.html" class="text-decoration-none">Sustainable Luxury: How We Protect the Canopy</a></h4>
+                            <p class="text-muted small">Discover the innovative architectural techniques we use to build without harming our forest home...</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Blog 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100">
+                        <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&q=80&w=800" class="card-img-top" style="height: 250px; object-fit: cover;">
+                        <div class="card-body p-4">
+                            <div class="mb-2"><span class="badge bg-arboria text-white text-uppercase py-2 px-3 fw-bold" style="font-size: 0.7rem; letter-spacing: 1px;">Wellness • May 05, 2026</span></div>
+                            <h4 class="card-title mb-3"><a href="blog-details.html" class="text-decoration-none">The Healing Power of Forest Bathing</a></h4>
+                            <p class="text-muted small">Science confirms what we've always known: spending time among trees has profound benefits for the mind...</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Blog 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100">
+                        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=800" class="card-img-top" style="height: 250px; object-fit: cover;">
+                        <div class="card-body p-4">
+                            <div class="mb-2"><span class="badge bg-arboria text-white text-uppercase py-2 px-3 fw-bold" style="font-size: 0.7rem; letter-spacing: 1px;">Adventure • Apr 28, 2026</span></div>
+                            <h4 class="card-title mb-3"><a href="blog-details.html" class="text-decoration-none">Top 5 Hidden Trails Around Arboria</a></h4>
+                            <p class="text-muted small">From secret waterfalls to panoramic ridge views, here are our favorite treks for every skill level...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Explore Topics Section -->
+    <section class="py-5">
+        <div class="container">
+            <h3 class="mb-4 fw-bold">Explore by Topic</h3>
+            <div class="row g-3">
+                <div class="col-6 col-md-3">
+                    <a href="#" class="card bg-dark text-white border-0 overflow-hidden rounded-4 text-decoration-none">
+                        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=400" class="card-img opacity-50" alt="Wellness" style="height: 120px; object-fit: cover;">
+                        <div class="card-img-overlay d-flex align-items-center justify-content-center">
+                            <h5 class="card-title mb-0 fw-bold">Wellness</h5>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-6 col-md-3">
+                    <a href="#" class="card bg-dark text-white border-0 overflow-hidden rounded-4 text-decoration-none">
+                        <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&q=80&w=400" class="card-img opacity-50" alt="Adventure" style="height: 120px; object-fit: cover;">
+                        <div class="card-img-overlay d-flex align-items-center justify-content-center">
+                            <h5 class="card-title mb-0 fw-bold">Adventure</h5>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-6 col-md-3">
+                    <a href="#" class="card bg-dark text-white border-0 overflow-hidden rounded-4 text-decoration-none">
+                        <img src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&q=80&w=400" class="card-img opacity-50" alt="Architecture" style="height: 120px; object-fit: cover;">
+                        <div class="card-img-overlay d-flex align-items-center justify-content-center">
+                            <h5 class="card-title mb-0 fw-bold">Architecture</h5>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-6 col-md-3">
+                    <a href="#" class="card bg-dark text-white border-0 overflow-hidden rounded-4 text-decoration-none">
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=400" class="card-img opacity-50" alt="Gastronomy" style="height: 120px; object-fit: cover;">
+                        <div class="card-img-overlay d-flex align-items-center justify-content-center">
+                            <h5 class="card-title mb-0 fw-bold">Gastronomy</h5>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Section -->
+    <section class="py-5 bg-light mb-5">
+        <div class="container text-center">
+            <h3 class="mb-3 fw-bold">From the Community</h3>
+            <p class="text-muted mb-5">Follow our guests' experiences using <span class="text-accent fw-bold">#ArboriaRetreats</span></p>
+            <div class="row g-2">
+                <div class="col-6 col-md-3">
+                    <img src="https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&q=80&w=400" class="img-fluid rounded-3 h-100 object-fit-cover" alt="Community 1" style="max-height: 250px;">
+                </div>
+                <div class="col-6 col-md-3">
+                    <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=400" class="img-fluid rounded-3 h-100 object-fit-cover" alt="Community 2" style="max-height: 250px;">
+                </div>
+                <div class="col-6 col-md-3">
+                    <img src="https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?auto=format&fit=crop&q=80&w=400" class="img-fluid rounded-3 h-100 object-fit-cover" alt="Community 3" style="max-height: 250px;">
+                </div>
+                <div class="col-6 col-md-3">
+                    <img src="https://images.unsplash.com/photo-1542718610-a1d656d1884c?auto=format&fit=crop&q=80&w=400" class="img-fluid rounded-3 h-100 object-fit-cover" alt="Community 4" style="max-height: 250px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Newsletter Signup -->
+    <section class="py-5 mb-5">
+        <div class="container">
+            <div class="text-white rounded-4 p-5 text-center position-relative overflow-hidden shadow-lg" style="background-color: var(--primary);">
+                <div class="position-absolute top-0 start-0 w-100 h-100" style="background: url('https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&q=80&w=1200') center/cover; opacity: 0.15;"></div>
+                <div class="position-relative z-1 py-4">
+                    <h2 class="mb-3 fw-bold text-white">Never Miss a Story</h2>
+                    <p class="lead mb-4 opacity-75 mx-auto text-white" style="max-width: 600px;">Join our community to receive curated tales of nature, wellness tips, and exclusive Arboria retreat offers.</p>
+                    <form class="row justify-content-center">
+                        <div class="col-md-8 col-lg-6 d-flex gap-2">
+                            <input type="email" class="form-control py-3 border-0 shadow-none" placeholder="Enter your email address">
+                            <button type="submit" class="btn btn-accent px-4 fw-bold">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <a class="navbar-brand text-white mb-4" href="index.html">
+                        <i class="bi bi-tree-fill text-accent"></i>
+                        <span>ARBORIA</span>
+                    </a>
+                    <p class="opacity-75 pe-lg-5">Escape to a world of tranquility and luxury. Arboria offers the most unique forest stays for those seeking peace and adventure.</p>
+                    <div class="d-flex gap-3 mt-4">
+                        <a href="#" class="btn btn-sm btn-outline-light rounded-circle"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="btn btn-sm btn-outline-light rounded-circle"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="btn btn-sm btn-outline-light rounded-circle"><i class="bi bi-twitter-x"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-2">
+                    <h5>Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">Our Story</a></li>
+                        <li><a href="cabins.html">The Cabins</a></li>
+                        <li><a href="experiences.html">Experiences</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-lg-2">
+                    <h5>Support</h5>
+                    <ul class="footer-links">
+                        <li><a href="faq.html">FAQs</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="booking.html">Booking Policy</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-lg-4">
+                    <h5>Newsletter</h5>
+                    <p class="opacity-75">Subscribe to get the latest updates and exclusive offers.</p>
+                    <form class="mt-4">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Email address">
+                            <button class="btn btn-primary" type="button">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <hr class="my-5 opacity-25">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0 opacity-75">&copy; 2026 Arboria Luxury Retreats. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" height="25" class="me-3" alt="Paypal">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" height="20" class="me-3" alt="Visa">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" height="25" alt="Mastercard">
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

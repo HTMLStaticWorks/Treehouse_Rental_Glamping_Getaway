@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing & Packages | Arboria</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <style>
+        .pricing-hero {
+            height: 60vh;
+            min-height: 400px;
+            background-image: url('https://images.unsplash.com/photo-1587061949409-02df41d5e562?auto=format&fit=crop&q=80&w=1600');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            position: relative;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><i class="bi bi-tree-fill text-accent"></i><span>ARBORIA</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"><span class="navbar-toggler-icon"></span></button>
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar">
+                <div class="offcanvas-header"><h5 class="offcanvas-title">Menu</h5><button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button></div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="experiences.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="pricing.html">Pricing</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                        <li class="nav-item ms-lg-2"><button id="theme-toggle" class="btn btn-link p-0 nav-link"><i class="bi bi-moon-stars"></i></button></li>
+                        <li class="nav-item"><button id="rtl-toggle" class="btn btn-link p-0 nav-link"><i class="bi bi-translate"></i></button></li>
+                        <li class="nav-item ms-lg-3"><a href="booking.html" class="btn btn-primary">Book Now</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <header class="pricing-hero pt-5">
+        <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0,0,0,0.5);"></div>
+        <div class="container py-5 text-center position-relative z-1 text-white">
+            <h1 class="display-3 fw-bold mt-4 text-white">Simple, Transparent Pricing</h1>
+            <p class="lead opacity-75 text-white">No hidden fees. Just pure nature and luxury.</p>
+        </div>
+    </header>
+
+    <!-- Section 1: Accommodations -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h6 class="text-accent fw-bold text-uppercase">Accommodations</h6>
+                <h2 class="display-5 fw-bold">Choose Your Sanctuary</h2>
+                <p class="text-muted">Flexible nightly rates for every type of explorer.</p>
+            </div>
+            <div class="row g-4 mb-5">
+                <div class="col-lg-4">
+                    <div class="card border-0 shadow-sm rounded-4 p-4 text-center h-100">
+                        <div class="mb-4">
+                            <i class="bi bi-tent fs-1 text-primary"></i>
+                        </div>
+                        <h5 class="text-secondary mb-3">Glamping Dome</h5>
+                        <h2 class="display-4 fw-bold mb-3">$199 <small class="fs-6 text-muted">/ night</small></h2>
+                        <ul class="list-unstyled mb-5 text-start mx-auto" style="max-width: 200px;">
+                            <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i> Starry sky view</li>
+                            <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i> Private deck</li>
+                            <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i> Outdoor shower</li>
+                            <li class="mb-2 text-muted"><del>Breakfast included</del></li>
+                        </ul>
+                        <div class="mt-auto">
+                            <a href="booking.html" class="btn btn-outline-primary w-100">Book Basic</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card border-primary shadow-lg rounded-4 p-4 text-center position-relative h-100">
+                        <span class="badge bg-accent position-absolute top-0 start-50 translate-middle">Most Popular</span>
+                        <div class="mb-4">
+                            <i class="bi bi-tree fs-1 text-primary"></i>
+                        </div>
+                        <h5 class="text-secondary mb-3">Treehouse Suite</h5>
+                        <h2 class="display-4 fw-bold mb-3">$299 <small class="fs-6 text-muted">/ night</small></h2>
+                        <ul class="list-unstyled mb-5 text-start mx-auto" style="max-width: 200px;">
+                            <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i> 360-degree canopy view</li>
+                            <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i> Gourmet kitchen</li>
+                            <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i> Breakfast delivered</li>
+                            <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i> Guided morning trek</li>
+                        </ul>
+                        <div class="mt-auto">
+                            <a href="booking.html" class="btn btn-primary w-100">Book Suite</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card border-0 shadow-sm rounded-4 p-4 text-center h-100">
+                        <div class="mb-4">
+                            <i class="bi bi-house-heart fs-1 text-primary"></i>
+                        </div>
+                        <h5 class="text-secondary mb-3">Luxury A-Frame</h5>
+                        <h2 class="display-4 fw-bold mb-3">$449 <small class="fs-6 text-muted">/ night</small></h2>
+                        <ul class="list-unstyled mb-5 text-start mx-auto" style="max-width: 200px;">
+                            <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i> 2 Bedrooms + Loft</li>
+                            <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i> Private sauna & tub</li>
+                            <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i> Personal chef option</li>
+                            <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i> VIP Airport pickup</li>
+                        </ul>
+                        <div class="mt-auto">
+                            <a href="booking.html" class="btn btn-outline-primary w-100">Book Luxury</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Curated Retreats -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h6 class="text-accent fw-bold text-uppercase">Curated Retreats</h6>
+                <h2 class="display-5 fw-bold">All-Inclusive Experiences</h2>
+                <p class="text-muted">Pre-planned 3-day journeys for deeper connection.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100">
+                        <img src="assets/images/detox.png" class="card-img-top" style="height: 200px; object-fit: cover;" alt="Digital Detox Retreat">
+                        <div class="card-body p-4">
+                            <h4 class="fw-bold mb-2">Digital Detox</h4>
+                            <p class="text-muted small mb-4">Disconnect to reconnect. Includes yoga, meditation, and guided forest bathing.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold fs-5 text-primary">$899 <small class="text-muted fs-6">/ 3 days</small></span>
+                                <a href="#" class="btn btn-sm btn-primary">Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100">
+                        <img src="assets/images/adventure.png" class="card-img-top" style="height: 200px; object-fit: cover;" alt="Wild Adventure Retreat">
+                        <div class="card-body p-4">
+                            <h4 class="fw-bold mb-2">Wild Adventure</h4>
+                            <p class="text-muted small mb-4">For the thrill-seekers. Includes rock climbing, night trekking, and fire-making.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold fs-5 text-primary">$1,199 <small class="text-muted fs-6">/ 3 days</small></span>
+                                <a href="#" class="btn btn-sm btn-primary">Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100">
+                        <img src="assets/images/cabin-3.png" class="card-img-top" style="height: 200px; object-fit: cover;" alt="Canopy Romance Retreat">
+                        <div class="card-body p-4">
+                            <h4 class="fw-bold mb-2">Canopy Romance</h4>
+                            <p class="text-muted small mb-4">Celebrate love. Private starlight dinner, spa treatments, and champagne on arrival.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold fs-5 text-primary">$1,499 <small class="text-muted fs-6">/ 3 days</small></span>
+                                <a href="#" class="btn btn-sm btn-primary">Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Eco-Membership -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 mb-5 mb-lg-0">
+                    <h6 class="text-accent fw-bold text-uppercase mb-3">Loyalty Program</h6>
+                    <h2 class="display-5 fw-bold mb-4">The Arboria Seedlings</h2>
+                    <p class="lead text-muted mb-4">Join our community of nature lovers and enjoy exclusive benefits while contributing to forest conservation.</p>
+                    <div class="d-flex align-items-center gap-3 mb-3">
+                        <i class="bi bi-award fs-3 text-primary"></i>
+                        <div>
+                            <h6 class="mb-0 fw-bold">Priority Booking</h6>
+                            <p class="small text-muted mb-0">Get 48-hour early access to seasonal availability.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center gap-3 mb-4">
+                        <i class="bi bi-tree fs-3 text-primary"></i>
+                        <div>
+                            <h6 class="mb-0 fw-bold">One Tree Per Stay</h6>
+                            <p class="small text-muted mb-0">We plant a tree in your name for every visit.</p>
+                        </div>
+                    </div>
+                    <a href="register.html" class="btn btn-primary px-4 py-2">Join the Club</a>
+                </div>
+                <div class="col-lg-7">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="bg-primary text-white p-4 rounded-4 shadow h-100">
+                                <h4 class="fw-bold">Seedling</h4>
+                                <h2 class="mb-3">$99 <small class="fs-6 opacity-75">/ year</small></h2>
+                                <hr class="opacity-25">
+                                <ul class="list-unstyled small opacity-75">
+                                    <li class="mb-2"><i class="bi bi-check-circle me-2"></i> 5% discount on stays</li>
+                                    <li class="mb-2"><i class="bi bi-check-circle me-2"></i> Welcome eco-kit</li>
+                                    <li class="mb-2"><i class="bi bi-check-circle me-2"></i> Newsletter access</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="bg-accent text-dark p-4 rounded-4 shadow h-100">
+                                <h4 class="fw-bold">Ancient Oak</h4>
+                                <h2 class="mb-3">$499 <small class="fs-6 opacity-75">/ year</small></h2>
+                                <hr class="opacity-25">
+                                <ul class="list-unstyled small fw-medium">
+                                    <li class="mb-2"><i class="bi bi-check-circle-fill me-2"></i> 15% discount on stays</li>
+                                    <li class="mb-2"><i class="bi bi-check-circle-fill me-2"></i> Free room upgrades</li>
+                                    <li class="mb-2"><i class="bi bi-check-circle-fill me-2"></i> Unlimited local treks</li>
+                                    <li class="mb-2"><i class="bi bi-check-circle-fill me-2"></i> Annual gala invitation</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Pricing FAQ -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h6 class="text-accent fw-bold text-uppercase">Got Questions?</h6>
+                <h2 class="display-5 fw-bold">Pricing & Booking FAQ</h2>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="accordion accordion-flush shadow-sm rounded-4 overflow-hidden" id="pricingFaq">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold py-4" type="button" data-bs-toggle="collapse" data-bs-target="#f1">
+                                    Are there any seasonal price variations?
+                                </button>
+                            </h2>
+                            <div id="f1" class="accordion-collapse collapse" data-bs-parent="#pricingFaq">
+                                <div class="accordion-body text-muted pb-4">
+                                    Yes, our rates vary slightly between peak season (Summer and Winter holidays) and off-peak seasons. The prices shown are our standard baseline rates. For exact pricing on your preferred dates, please use our booking engine.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold py-4" type="button" data-bs-toggle="collapse" data-bs-target="#f2">
+                                    What is included in the 'nightly rate'?
+                                </button>
+                            </h2>
+                            <div id="f2" class="accordion-collapse collapse" data-bs-parent="#pricingFaq">
+                                <div class="accordion-body text-muted pb-4">
+                                    The nightly rate includes your accommodation, access to all general property trails, high-speed Wi-Fi, organic coffee and tea in-room, and basic concierge services. Specific packages like the 'Treehouse Suite' also include breakfast and a guided trek.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold py-4" type="button" data-bs-toggle="collapse" data-bs-target="#f3">
+                                    Can I upgrade my stay after booking?
+                                </button>
+                            </h2>
+                            <div id="f3" class="accordion-collapse collapse" data-bs-parent="#pricingFaq">
+                                <div class="accordion-body text-muted pb-4">
+                                    Absolutely! You can add retreat packages, private dining, or spa treatments to your stay at any time through your Guest Dashboard or by contacting our team up to 48 hours before arrival.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold py-4" type="button" data-bs-toggle="collapse" data-bs-target="#f4">
+                                    What payment methods do you accept?
+                                </button>
+                            </h2>
+                            <div id="f4" class="accordion-collapse collapse" data-bs-parent="#pricingFaq">
+                                <div class="accordion-body text-muted pb-4">
+                                    We accept all major credit cards (Visa, Mastercard, American Express), PayPal, and select cryptocurrency payments. For membership plans, we also offer monthly bank transfer options.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <a class="navbar-brand text-white mb-4" href="index.html">
+                        <i class="bi bi-tree-fill text-accent"></i>
+                        <span>ARBORIA</span>
+                    </a>
+                    <p class="opacity-75 pe-lg-5">Escape to a world of tranquility and luxury. Arboria offers the most unique forest stays for those seeking peace and adventure.</p>
+                    <div class="d-flex gap-3 mt-4">
+                        <a href="#" class="btn btn-sm btn-outline-light rounded-circle"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="btn btn-sm btn-outline-light rounded-circle"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="btn btn-sm btn-outline-light rounded-circle"><i class="bi bi-twitter-x"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-2">
+                    <h5>Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">Our Story</a></li>
+                        <li><a href="cabins.html">The Cabins</a></li>
+                        <li><a href="experiences.html">Experiences</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-lg-2">
+                    <h5>Support</h5>
+                    <ul class="footer-links">
+                        <li><a href="faq.html">FAQs</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="booking.html">Booking Policy</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-lg-4">
+                    <h5>Newsletter</h5>
+                    <p class="opacity-75">Subscribe to get the latest updates and exclusive offers.</p>
+                    <form class="mt-4">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Email address">
+                            <button class="btn btn-primary" type="button">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <hr class="my-5 opacity-25">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0 opacity-75">&copy; 2026 Arboria Luxury Retreats. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" height="25" class="me-3" alt="Paypal">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" height="20" class="me-3" alt="Visa">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" height="25" alt="Mastercard">
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
