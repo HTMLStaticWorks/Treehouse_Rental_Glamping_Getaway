@@ -2,6 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- Anti-FOUC: apply saved theme/RTL before first paint -->
+    <script>
+        (function() {
+            var t = localStorage.getItem('theme');
+            if (t) document.documentElement.setAttribute('data-theme', t);
+            var d = localStorage.getItem('dir');
+            if (d) document.documentElement.setAttribute('dir', d);
+        })();
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | Arboria Luxury Retreats</title>
     
@@ -18,7 +27,11 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dark-mode.css">
     <link rel="stylesheet" href="assets/css/rtl.css">
-    
+    <!-- Preload collage images to prevent alt-text flash -->
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=600">
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&q=80&w=800">
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&q=80&w=800">
+
     <style>
         .about-hero {
             height: 60vh;
@@ -31,12 +44,20 @@
             position: relative;
             color: #ffffff;
         }
+        /* Smooth fade-in for collage images */
+        @keyframes imgFadeIn {
+            from { opacity: 0; transform: scale(1.03); }
+            to   { opacity: 1; transform: scale(1); }
+        }
+        .img-fade {
+            animation: imgFadeIn 0.6s ease forwards;
+        }
     </style>
 </head>
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
+    <nav class="navbar navbar-expand-xl fixed-top navbar-dark bg-primary">
         <div class="container">
             <a class="navbar-brand" href="index.html"><i class="bi bi-tree-fill text-accent"></i><span>ARBORIA</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"><span class="navbar-toggler-icon"></span></button>
@@ -51,10 +72,22 @@
                         <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
                         <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
                         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                        <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
-                        <li class="nav-item ms-lg-2"><button id="theme-toggle" class="btn btn-link p-0 nav-link"><i class="bi bi-moon-stars"></i></button></li>
-                        <li class="nav-item"><button id="rtl-toggle" class="btn btn-link p-0 nav-link"><i class="bi bi-translate"></i></button></li>
-                        <li class="nav-item ms-lg-3"><a href="booking.html" class="btn btn-primary">Book Now</a></li>
+                        <li class="nav-item ms-lg-2">
+                            <button id="theme-toggle" class="btn btn-link p-0 nav-link">
+                                <i class="bi bi-moon-stars"></i>
+                            </button>
+                        </li>
+                        <li class="nav-item">
+                            <button id="rtl-toggle" class="btn btn-link p-0 nav-link">
+                                <i class="bi bi-translate"></i>
+                            </button>
+                        </li>
+                        <li class="nav-item ms-lg-3">
+                            <div class="d-flex gap-2">
+                                <a href="login.html" class="btn btn-outline-light px-4">Login</a>
+                                <a href="booking.html" class="btn btn-primary px-4">Book Now</a>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -108,13 +141,25 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="row g-3">
-                        <div class="col-6 mt-5">
-                            <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&q=80&w=800" class="img-fluid rounded-4 shadow" alt="Story 1">
-                        </div>
-                        <div class="col-6">
-                            <img src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&q=80&w=800" class="img-fluid rounded-4 shadow" alt="Story 2">
-                        </div>
+                    <div class="position-relative" style="height: 520px;">
+                        <!-- Bottom-left small image (background layer) -->
+                        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=600"
+                             class="rounded-4 shadow position-absolute img-fade"
+                             style="width: 42%; height: 200px; object-fit: cover; bottom: 0; left: 0; z-index: 1; animation-delay: 0.1s;"
+                             loading="eager" alt="">
+                        <!-- Left image – top-left -->
+                        <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&q=80&w=800"
+                             class="rounded-4 shadow-lg position-absolute img-fade"
+                             style="width: 58%; height: 320px; object-fit: cover; top: 0; left: 0; z-index: 2; animation-delay: 0s;"
+                             loading="eager" alt="">
+                        <!-- Right image – bottom-right (top layer) -->
+                        <img src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&q=80&w=800"
+                             class="rounded-4 shadow-lg position-absolute img-fade"
+                             style="width: 58%; height: 320px; object-fit: cover; bottom: 0; right: 0; z-index: 3; animation-delay: 0.2s;"
+                             loading="eager" alt="">
+                        <!-- Gold accent dot -->
+                        <div class="position-absolute rounded-circle"
+                             style="width: 18px; height: 18px; background: var(--accent); top: 50%; left: 56%; z-index: 4;"></div>
                     </div>
                 </div>
             </div>
@@ -122,10 +167,10 @@
     </section>
 
     <!-- Philosophy Section -->
-    <section class="bg-primary text-white">
-        <div class="container text-center">
+    <section class="py-5 bg-primary text-white">
+        <div class="container py-5 text-center">
             <h6 class="text-accent text-uppercase fw-bold mb-3">Our Philosophy</h6>
-            <h2 class="display-5 mb-5 mx-auto" style="max-width: 800px;">We believe that nature is not a place to visit, it is home.</h2>
+            <h2 class="display-4 fw-bold mb-5 mx-auto text-white" style="max-width: 800px;">We believe that nature is not a place to visit, it is home.</h2>
             <div class="row g-4 mt-4">
                 <div class="col-md-4">
                     <div class="p-4 bg-white bg-opacity-10 rounded-4 h-100">
@@ -223,7 +268,7 @@
                 <div class="col-lg-6 offset-lg-1">
                     <div class="position-relative">
                         <img src="https://images.unsplash.com/photo-1542718610-a1d656d1884c?auto=format&fit=crop&q=80&w=800" class="img-fluid rounded-4 shadow-lg" alt="Construction">
-                        <div class="position-absolute bottom-0 start-0 translate-middle-x bg-white p-4 rounded-4 shadow-lg d-none d-md-block" style="margin-bottom: 50px;">
+                        <div class="journey-badge bg-white p-4 rounded-4 shadow-lg d-none d-md-block">
                             <h3 class="text-primary fw-bold mb-0 display-6">50K+</h3>
                             <p class="text-muted fw-bold mb-0">Trees Planted</p>
                         </div>
@@ -296,13 +341,8 @@
             </div>
             <hr class="my-5 opacity-25">
             <div class="row align-items-center">
-                <div class="col-md-6 text-center text-md-start">
+                <div class="col-12 text-center">
                     <p class="mb-0 opacity-75">&copy; 2026 Arboria Luxury Retreats. All rights reserved.</p>
-                </div>
-                <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" height="25" class="me-3" alt="Paypal">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" height="20" class="me-3" alt="Visa">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" height="25" alt="Mastercard">
                 </div>
             </div>
         </div>

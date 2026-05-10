@@ -67,8 +67,24 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 0.9 !important;
 }
 
-.bg-arboria {
+.bg-arboria, .bg-primary {
     background-color: var(--primary) !important;
+}
+
+.bg-secondary {
+    background-color: var(--secondary) !important;
+}
+
+.bg-accent {
+    background-color: var(--accent) !important;
+}
+
+.border-primary {
+    border-color: var(--primary) !important;
+}
+
+.border-secondary {
+    border-color: var(--secondary) !important;
 }
 
 /* Global Styles */
@@ -109,6 +125,19 @@ section {
     background-color: var(--primary);
     color: var(--white);
     transform: translateY(-3px);
+}
+
+.btn-outline-light {
+    border-width: 2px;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.btn-outline-light:hover {
+    background-color: var(--white);
+    color: var(--primary) !important;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .btn-accent {
@@ -178,6 +207,20 @@ section {
     transition: var(--transition);
 }
 
+@media (min-width: 992px) and (max-width: 1250px) {
+    .navbar .nav-link {
+        margin: 0 4px;
+        font-size: 0.85rem;
+    }
+    .navbar-brand {
+        margin-right: 10px;
+        font-size: 1.2rem;
+    }
+    .ms-lg-3 {
+        margin-left: 10px !important;
+    }
+}
+
 /* Active link gets accent underline */
 .navbar .nav-link.active {
     color: #ffffff !important;
@@ -189,6 +232,7 @@ section {
     color: var(--accent) !important;
 }
 
+/* ── Pages with solid bg-primary navbar ── */
 /* ── Scrolled on white bg (day theme) ── */
 .navbar.scrolled:not(.bg-primary) .nav-link {
     color: #1a1a1a !important;
@@ -198,6 +242,17 @@ section {
 .navbar.scrolled:not(.bg-primary) .nav-link.active {
     color: var(--primary) !important;
     border-bottom-color: var(--primary);
+}
+
+/* Scrolled Button Styles */
+.navbar.scrolled:not(.bg-primary) .btn-outline-light {
+    color: var(--primary) !important;
+    border-color: var(--primary) !important;
+}
+
+.navbar.scrolled:not(.bg-primary) .btn-outline-light:hover {
+    background-color: var(--primary) !important;
+    color: var(--white) !important;
 }
 
 .navbar.scrolled:not(.bg-primary) .nav-link:hover {
@@ -213,6 +268,51 @@ section {
 .navbar.bg-primary .nav-link:hover,
 .navbar.bg-primary .nav-link.active {
     color: #ffffff !important;
+}
+
+/* =============================================
+   OFFCANVAS MENU - Mobile Visibility Fix
+   ============================================= */
+.offcanvas {
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Force white text inside offcanvas regardless of scrolled navbar state */
+.offcanvas .nav-link {
+    color: #ffffff !important; 
+    text-shadow: none !important;
+    padding: 15px 20px !important;
+    margin: 0 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    width: 100%;
+}
+
+.offcanvas .nav-link.active {
+    color: var(--accent) !important;
+    border-bottom: 1px solid var(--accent) !important;
+}
+
+.offcanvas .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--accent) !important;
+}
+
+/* Theme/RTL Toggles in Offcanvas */
+.offcanvas .btn-link {
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.offcanvas .btn-link i {
+    font-size: 1.2rem;
+}
+
+@media (max-width: 991px) {
+    .navbar-nav {
+        padding-top: 20px;
+    }
 }
 
 /* Mobile toggler: invert icon when on white scrolled bg */
@@ -372,6 +472,63 @@ section {
     padding-left: 5px;
 }
 
+/* Newsletter Group Styling */
+.newsletter-group {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 6px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: var(--transition);
+}
+
+.newsletter-group:focus-within {
+    border-color: var(--accent);
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.newsletter-group .form-control {
+    background: transparent !important;
+    border: none !important;
+    color: white !important;
+    padding-left: 20px;
+    box-shadow: none !important;
+}
+
+.newsletter-group .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.newsletter-group .btn-primary {
+    border-radius: 50px !important;
+    background-color: var(--accent);
+    border-color: var(--accent);
+    color: var(--primary) !important;
+    font-weight: 700;
+    padding: 10px 25px;
+}
+
+.newsletter-group .btn-primary:hover {
+    background-color: var(--white);
+    border-color: var(--white);
+    transform: none;
+}
+
+@media (max-width: 576px) {
+    .newsletter-group {
+        border-radius: 15px;
+        padding: 10px;
+    }
+    .newsletter-group .btn-primary {
+        width: 100%;
+        margin-top: 10px;
+        border-radius: 10px !important;
+    }
+    .newsletter-group .form-control {
+        padding-left: 10px;
+        text-align: center;
+    }
+}
+
 .footer .btn-primary {
     background-color: var(--accent);
     border-color: var(--accent);
@@ -397,6 +554,42 @@ section {
 
 [data-theme="dark"] .booking-search {
     background: #1e221e;
+}
+
+/* Journey Badge Responsiveness */
+.journey-badge {
+    position: absolute;
+    bottom: 40px;
+    left: 20px;
+    z-index: 5;
+}
+
+@media (min-width: 1200px) {
+    .journey-badge {
+        left: 0;
+        transform: translateX(-50%);
+    }
+}
+
+/* Social Circle Buttons */
+.social-circle {
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary);
+    color: var(--white) !important;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.social-circle:hover {
+    background-color: var(--accent);
+    color: var(--primary) !important;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* =============================================

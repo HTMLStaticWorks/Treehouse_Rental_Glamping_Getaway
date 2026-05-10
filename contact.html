@@ -1,6 +1,15 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Anti-FOUC: apply saved theme/RTL before first paint -->
+    <script>
+        (function() {
+            var t = localStorage.getItem('theme');
+            if (t) document.documentElement.setAttribute('data-theme', t);
+            var d = localStorage.getItem('dir');
+            if (d) document.documentElement.setAttribute('dir', d);
+        })();
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | Arboria Luxury Retreats</title>
@@ -23,7 +32,7 @@
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
+    <nav class="navbar navbar-expand-xl fixed-top navbar-dark bg-primary">
         <div class="container">
             <a class="navbar-brand" href="index.html"><i class="bi bi-tree-fill text-accent"></i><span>ARBORIA</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"><span class="navbar-toggler-icon"></span></button>
@@ -38,10 +47,22 @@
                         <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
                         <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
                         <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
-                        <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
-                        <li class="nav-item ms-lg-2"><button id="theme-toggle" class="btn btn-link p-0 nav-link"><i class="bi bi-moon-stars"></i></button></li>
-                        <li class="nav-item"><button id="rtl-toggle" class="btn btn-link p-0 nav-link"><i class="bi bi-translate"></i></button></li>
-                        <li class="nav-item ms-lg-3"><a href="booking.html" class="btn btn-primary">Book Now</a></li>
+                        <li class="nav-item ms-lg-2">
+                            <button id="theme-toggle" class="btn btn-link p-0 nav-link">
+                                <i class="bi bi-moon-stars"></i>
+                            </button>
+                        </li>
+                        <li class="nav-item">
+                            <button id="rtl-toggle" class="btn btn-link p-0 nav-link">
+                                <i class="bi bi-translate"></i>
+                            </button>
+                        </li>
+                        <li class="nav-item ms-lg-3">
+                            <div class="d-flex gap-2">
+                                <a href="login.html" class="btn btn-outline-light px-4">Login</a>
+                                <a href="booking.html" class="btn btn-primary px-4">Book Now</a>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -87,9 +108,9 @@
                         <hr class="my-4 opacity-10">
                         <h6 class="mb-3">Follow Us</h6>
                         <div class="d-flex gap-3">
-                            <a href="#" class="btn btn-primary btn-sm rounded-circle"><i class="bi bi-instagram"></i></a>
-                            <a href="#" class="btn btn-primary btn-sm rounded-circle"><i class="bi bi-facebook"></i></a>
-                            <a href="#" class="btn btn-primary btn-sm rounded-circle"><i class="bi bi-pinterest"></i></a>
+                            <a href="#" class="social-circle"><i class="bi bi-instagram"></i></a>
+                            <a href="#" class="social-circle"><i class="bi bi-facebook"></i></a>
+                            <a href="#" class="social-circle"><i class="bi bi-pinterest"></i></a>
                         </div>
                     </div>
                 </div>
@@ -145,37 +166,7 @@
         </div>
     </section>
 
-    <!-- Connect Elsewhere Section -->
-    <section class="py-5" style="background-color: #0b1120; color: #ffffff;">
-        <div class="container text-center mb-5">
-            <h2 class="display-5 fw-bold mb-3">Connect Elsewhere</h2>
-            <p class="lead opacity-75 mx-auto" style="max-width: 700px;">Find us on social and follow for updates, behind-the-scenes, and exclusive offers.</p>
-        </div>
-        <div class="container pb-5">
-            <div class="row g-4 justify-content-center">
-                <!-- GitHub Card -->
-                <div class="col-md-6 col-lg-5">
-                    <div class="card h-100 p-5 text-center border-0 rounded-4" style="background-color: #1a2333; border: 1px solid rgba(255,255,255,0.05) !important;">
-                        <div class="mb-4">
-                            <i class="bi bi-github display-1 text-info"></i>
-                        </div>
-                        <h3 class="fw-bold mb-3 text-info">GitHub</h3>
-                        <p class="opacity-75">Explore our project updates, code, and resources.</p>
-                    </div>
-                </div>
-                <!-- Twitter/X Card -->
-                <div class="col-md-6 col-lg-5">
-                    <div class="card h-100 p-5 text-center border-0 rounded-4" style="background-color: #1a2333; border: 1px solid rgba(255,255,255,0.05) !important;">
-                        <div class="mb-4">
-                            <i class="bi bi-twitter-x display-1 text-info"></i>
-                        </div>
-                        <h3 class="fw-bold mb-3 text-info">Twitter / X</h3>
-                        <p class="opacity-75">Follow us for audio restoration tips, new projects, and studio offers.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+
 
     <footer class="footer">
         <div class="container">
@@ -225,13 +216,8 @@
             </div>
             <hr class="my-5 opacity-25">
             <div class="row align-items-center">
-                <div class="col-md-6 text-center text-md-start">
+                <div class="col-12 text-center">
                     <p class="mb-0 opacity-75">&copy; 2026 Arboria Luxury Retreats. All rights reserved.</p>
-                </div>
-                <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" height="25" class="me-3" alt="Paypal">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" height="20" class="me-3" alt="Visa">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" height="25" alt="Mastercard">
                 </div>
             </div>
         </div>

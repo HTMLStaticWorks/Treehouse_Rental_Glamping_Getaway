@@ -1,6 +1,15 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Anti-FOUC: apply saved theme/RTL before first paint -->
+    <script>
+        (function() {
+            var t = localStorage.getItem('theme');
+            if (t) document.documentElement.setAttribute('data-theme', t);
+            var d = localStorage.getItem('dir');
+            if (d) document.documentElement.setAttribute('dir', d);
+        })();
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Experiences | Arboria Luxury Retreats</title>
@@ -29,7 +38,7 @@
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
+    <nav class="navbar navbar-expand-xl fixed-top navbar-dark bg-primary">
         <div class="container">
             <a class="navbar-brand" href="index.html"><i class="bi bi-tree-fill text-accent"></i><span>ARBORIA</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"><span class="navbar-toggler-icon"></span></button>
@@ -190,13 +199,8 @@
             </div>
             <hr class="my-5 opacity-25">
             <div class="row align-items-center">
-                <div class="col-md-6 text-center text-md-start">
+                <div class="col-12 text-center">
                     <p class="mb-0 opacity-75">&copy; 2026 Arboria Luxury Retreats. All rights reserved.</p>
-                </div>
-                <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" height="25" class="me-3" alt="Paypal">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" height="20" class="me-3" alt="Visa">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" height="25" alt="Mastercard">
                 </div>
             </div>
         </div>

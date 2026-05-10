@@ -58,19 +58,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const counters = document.querySelectorAll('.counter');
     const speed = 200;
 
-    const animateCounters = () => {
-        counters.forEach(counter => {
-            const target = +counter.getAttribute('data-target');
-            const count = +counter.innerText;
+    const animateCounter = (counter) => {
+        const target = +counter.getAttribute('data-target');
+        const speed = 100; // Adjusted speed for smoother animation
+        
+        const update = () => {
+            const count = +counter.innerText.replace('+', '');
             const inc = target / speed;
 
             if (count < target) {
-                counter.innerText = Math.ceil(count + inc);
-                setTimeout(animateCounters, 1);
+                counter.innerText = Math.ceil(count + inc) + '+';
+                requestAnimationFrame(update);
             } else {
-                counter.innerText = target;
+                counter.innerText = target + '+';
             }
-        });
+        };
+        update();
     }
 
     // Trigger counter when visible
@@ -78,7 +81,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                animateCounters();
+                animateCounter(entry.target);
+                observer.unobserve(entry.target); // Only animate once
             }
         });
     }, observerOptions);

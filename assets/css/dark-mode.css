@@ -15,6 +15,28 @@
     --glass-dark: rgba(0, 0, 0, 0.4);
 }
 
+/* ── Button Visibility in Dark Mode ── */
+[data-theme="dark"] .btn-primary {
+    background-color: var(--accent);
+    border-color: var(--accent);
+    color: var(--primary) !important; /* Dark green text on gold bg for maximum legibility */
+}
+
+[data-theme="dark"] .btn-primary:hover {
+    background-color: #f1c40f;
+    border-color: #f1c40f;
+}
+
+[data-theme="dark"] .btn-outline-primary {
+    color: var(--accent) !important;
+    border-color: var(--accent) !important;
+}
+
+[data-theme="dark"] .btn-outline-primary:hover {
+    background-color: var(--accent);
+    color: var(--primary) !important;
+}
+
 [data-theme="dark"] body {
     background-color: var(--white);
     color: var(--dark);

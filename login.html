@@ -1,6 +1,15 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Anti-FOUC: apply saved theme/RTL before first paint -->
+    <script>
+        (function() {
+            var t = localStorage.getItem('theme');
+            if (t) document.documentElement.setAttribute('data-theme', t);
+            var d = localStorage.getItem('dir');
+            if (d) document.documentElement.setAttribute('dir', d);
+        })();
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login | Arboria</title>
@@ -9,16 +18,16 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <style>
         body {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/images/hero-bg.png');
+            background: radial-gradient(circle at center, #264b3c 0%, #1a2f26 100%);
             background-size: cover;
-            background-position: center;
             height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
+            padding: 20px;
         }
         .login-card {
-            background: rgba(255, 255, 255, 0.15);
+            background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(15px);
             border: 1px solid rgba(255, 255, 255, 0.2);
             border-radius: 20px;
@@ -56,23 +65,32 @@
                 <input type="email" class="form-control py-2" placeholder="name@example.com">
             </div>
             <div class="mb-4">
-                <div class="d-flex justify-content-between align-items-center mb-1">
-                    <label class="form-label small fw-bold mb-0">Password</label>
-                    <a href="#" class="small text-decoration-none" style="color: #0d6efd;">Forgot?</a>
-                </div>
+                <label class="form-label small fw-bold">Password</label>
                 <input type="password" class="form-control py-2" placeholder="••••••••">
             </div>
-            <div class="mb-4 form-check">
-                <input type="checkbox" class="form-check-input" id="termsCheck">
-                <label class="form-check-label small opacity-75" for="termsCheck">I agree to the <a href="#" class="text-accent text-decoration-none">Terms and Conditions</a></label>
+            <div class="mb-4 d-flex justify-content-between align-items-center">
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="rememberMe">
+                    <label class="form-check-label small opacity-75" for="rememberMe">Remember Me</label>
+                </div>
+                <a href="#" class="small text-accent text-decoration-none fw-bold">Forgot Password?</a>
             </div>
-            <a href="dashboard.html" class="btn btn-primary w-100 py-3 fw-bold">Sign In</a>
-            <div class="text-center mt-4">
+            <a href="dashboard.html" class="btn btn-primary w-100 py-3 fw-bold mb-4">Sign In</a>
+            <div class="text-center">
                 <p class="small opacity-75">Don't have an account? <a href="register.html" class="text-accent text-decoration-none fw-bold">Register</a></p>
             </div>
             <hr class="my-4 opacity-25">
-            <div class="d-grid gap-2">
-                <button type="button" class="btn btn-outline-light btn-sm py-2"><i class="bi bi-google me-2"></i> Continue with Google</button>
+            <div class="row g-2">
+                <div class="col-6">
+                    <button type="button" class="btn btn-outline-light w-100 btn-sm py-2 d-flex align-items-center justify-content-center">
+                        <i class="bi bi-google me-2"></i> Google
+                    </button>
+                </div>
+                <div class="col-6">
+                    <button type="button" class="btn btn-outline-light w-100 btn-sm py-2 d-flex align-items-center justify-content-center">
+                        <i class="bi bi-apple me-2"></i> Apple
+                    </button>
+                </div>
             </div>
         </form>
     </div>

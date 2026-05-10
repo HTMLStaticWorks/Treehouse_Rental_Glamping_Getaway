@@ -1,6 +1,15 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Anti-FOUC: apply saved theme/RTL before first paint -->
+    <script>
+        (function() {
+            var t = localStorage.getItem('theme');
+            if (t) document.documentElement.setAttribute('data-theme', t);
+            var d = localStorage.getItem('dir');
+            if (d) document.documentElement.setAttribute('dir', d);
+        })();
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sustainable Luxury | Arboria Journal</title>
@@ -10,7 +19,7 @@
     <link rel="stylesheet" href="assets/css/dark-mode.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
+    <nav class="navbar navbar-expand-xl fixed-top navbar-dark bg-primary">
         <div class="container">
             <a class="navbar-brand" href="index.html"><i class="bi bi-tree-fill text-accent"></i><span>ARBORIA</span></a>
         </div>
