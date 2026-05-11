@@ -42,17 +42,17 @@
     color: var(--dark);
 }
 
-[data-theme="dark"] .navbar {
+[data-theme="dark"] .navbar:not(.bg-primary) {
     /* Gradient already handles hero readability; reset bg-color */
     background-color: transparent;
 }
 
-[data-theme="dark"] .navbar.scrolled {
+[data-theme="dark"] .navbar.scrolled:not(.bg-primary) {
     /* Dark frosted glass instead of white */
     background: rgba(14, 17, 14, 0.95) !important;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 2px 20px rgba(0,0,0,0.4);
 }
 
