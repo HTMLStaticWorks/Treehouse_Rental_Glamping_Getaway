@@ -233,3 +233,34 @@
 [data-theme="dark"] .hero-overlay {
     background: linear-gradient(to right, rgba(0,0,0,0.85), rgba(0,0,0,0.55));
 }
+
+/* ── Accordion (FAQ) ── */
+[data-theme="dark"] .accordion-item {
+    background-color: #1e2620;
+    border-color: rgba(255, 255, 255, 0.07);
+    color: #e0e8e2;
+}
+
+[data-theme="dark"] .accordion-button {
+    background-color: #1e2620;
+    color: #e8f0ea;
+}
+
+[data-theme="dark"] .accordion-button:not(.collapsed) {
+    background-color: rgba(229, 179, 88, 0.1);
+    color: var(--accent);
+    box-shadow: inset 0 calc(-1 * var(--bs-accordion-border-width)) 0 rgba(255,255,255,0.07);
+}
+
+[data-theme="dark"] .accordion-button::after {
+    filter: invert(1) brightness(0.8);
+}
+
+[data-theme="dark"] .accordion-button:not(.collapsed)::after {
+    filter: invert(70%) sepia(50%) saturate(1000%) hue-rotate(350deg);
+}
+
+[data-theme="dark"] .accordion-body {
+    background-color: #1e2620;
+    color: #a0aab4;
+}

@@ -250,6 +250,25 @@ section {
     }
 }
 
+/* Navbar button equal sizing and centering */
+.navbar .d-flex.gap-2 .btn {
+    min-width: 120px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ensure Book Now is distinctly visible as a button on dark navbar */
+.navbar:not(.scrolled):not(.bg-primary) .btn-primary {
+    background-color: var(--accent);
+    border-color: var(--accent);
+    color: var(--white) !important;
+}
+.navbar:not(.scrolled):not(.bg-primary) .btn-primary:hover {
+    background-color: #c4933a;
+    border-color: #c4933a;
+}
+
 /* Active link gets accent underline */
 .navbar .nav-link.active {
     color: #ffffff !important;

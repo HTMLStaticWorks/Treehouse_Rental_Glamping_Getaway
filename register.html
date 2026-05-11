@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <!-- Anti-FOUC: apply saved theme/RTL before first paint -->
@@ -63,6 +63,16 @@
         [data-theme="dark"] body {
             background: radial-gradient(circle at center, #264b3c 0%, #1a2f26 100%);
         }
+        [data-theme="dark"] .btn-primary {
+            background-color: var(--accent) !important;
+            border-color: var(--accent) !important;
+            color: #121412 !important; /* Force dark text for contrast */
+        }
+        [data-theme="dark"] .btn-primary:hover {
+            background-color: #f1c40f !important;
+            border-color: #f1c40f !important;
+            color: #121412 !important;
+        }
         [data-theme="dark"] .auth-card {
             background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(15px);
@@ -117,7 +127,7 @@
             </div>
             <div class="mb-4">
                 <label class="form-label small fw-bold">Create Password</label>
-                <input type="password" class="form-control" placeholder="••••••••">
+                <input type="password" class="form-control" placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢">
             </div>
             <div class="form-check mb-4">
                 <input class="form-check-input" type="checkbox" id="terms">

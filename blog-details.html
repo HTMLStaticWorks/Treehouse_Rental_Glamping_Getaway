@@ -20,9 +20,41 @@
     <link rel="stylesheet" href="assets/css/dark-mode.css">
 </head>
 <body>
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-xl fixed-top navbar-dark bg-primary">
         <div class="container">
             <a class="navbar-brand" href="index.html"><i class="bi bi-tree-fill text-accent"></i><span>ARBORIA</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"><span class="navbar-toggler-icon"></span></button>
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar">
+                <div class="offcanvas-header"><h5 class="offcanvas-title">Menu</h5><button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button></div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="experiences.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        <li class="nav-item ms-lg-2">
+                            <button id="theme-toggle" class="btn btn-link p-0 nav-link">
+                                <i class="bi bi-moon-stars"></i>
+                            </button>
+                        </li>
+                        <li class="nav-item">
+                            <button id="rtl-toggle" class="btn btn-link p-0 nav-link">
+                                <i class="bi bi-translate"></i>
+                            </button>
+                        </li>
+                        <li class="nav-item ms-lg-3">
+                            <div class="d-flex gap-2">
+                                <a href="login.html" class="btn btn-outline-light px-4">Login</a>
+                                <a href="booking.html" class="btn btn-primary px-4">Book Now</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </nav>
 
@@ -33,7 +65,7 @@
                     <div class="text-center mb-5">
                         <span class="text-secondary fw-bold text-uppercase">Eco-Travel</span>
                         <h1 class="display-4 fw-bold mt-2">Sustainable Luxury: How We Protect the Canopy</h1>
-                        <p class="text-muted mt-3">By Elara Vance • 10 min read • May 10, 2026</p>
+                        <p class="text-muted mt-3">By Elara Vance â€¢ 10 min read â€¢ May 10, 2026</p>
                     </div>
                     
                     <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&q=80&w=1200" class="img-fluid rounded-4 shadow mb-5 w-100">
@@ -43,7 +75,7 @@
                         <h3 class="text-primary mt-5 mb-4">Zero-Impact Architecture</h3>
                         <p class="mb-4">Our treehouses are built using a specialized "suspended foundation" system. Instead of digging deep into the soil and disrupting root networks, our structures are anchored to the ground with minimal footprints, allowing water and nutrients to flow freely to the trees above.</p>
                         <blockquote class="border-start border-4 border-accent ps-4 py-2 my-5 fst-italic bg-light rounded-2">
-                            "The goal was not to build a hotel in a forest, but to build a forest that happens to have a hotel." — Marcus Thorne, Lead Architect
+                            "The goal was not to build a hotel in a forest, but to build a forest that happens to have a hotel." â€” Marcus Thorne, Lead Architect
                         </blockquote>
                         <p>We use reclaimed cedar and sustainable pine for all our construction. Every piece of wood is treated with organic oils rather than chemical varnishes, ensuring that no harmful runoff enters the ecosystem during rainfall.</p>
                     </div>
@@ -52,9 +84,59 @@
         </div>
     </article>
 
+    <!-- Footer -->
     <footer class="footer">
-        <div class="container text-center">
-            <p class="opacity-75 mb-0">&copy; 2026 Arboria Luxury Retreats. All rights reserved.</p>
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <a class="navbar-brand text-white mb-4" href="index.html">
+                        <i class="bi bi-tree-fill text-accent"></i>
+                        <span>ARBORIA</span>
+                    </a>
+                    <p class="opacity-75 pe-lg-5">Escape to a world of tranquility and luxury. Arboria offers the most unique forest stays for those seeking peace and adventure.</p>
+                    <div class="d-flex gap-3 mt-4">
+                        <a href="#" class="btn btn-sm btn-outline-light rounded-circle"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="btn btn-sm btn-outline-light rounded-circle"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="btn btn-sm btn-outline-light rounded-circle"><i class="bi bi-twitter-x"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-2">
+                    <h5>Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">Our Story</a></li>
+                        <li><a href="cabins.html">The Cabins</a></li>
+                        <li><a href="experiences.html">Experiences</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-lg-2">
+                    <h5>Support</h5>
+                    <ul class="footer-links">
+                        <li><a href="faq.html">FAQs</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="booking.html">Booking Policy</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-lg-4">
+                    <h5>Newsletter</h5>
+                    <p class="opacity-75">Subscribe to get the latest updates and exclusive offers.</p>
+                    <form class="mt-4">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Email address">
+                            <button class="btn btn-primary" type="button">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <hr class="my-5 opacity-25">
+            <div class="row align-items-center">
+                <div class="col-12 text-center">
+                    <p class="mb-0 opacity-75">&copy; 2026 Arboria Luxury Retreats. All rights reserved.</p>
+                </div>
+            </div>
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
