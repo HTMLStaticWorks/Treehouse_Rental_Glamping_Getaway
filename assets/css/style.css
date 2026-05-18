@@ -92,7 +92,7 @@ h1[class*="fw-"], h2[class*="fw-"], h3[class*="fw-"], h4[class*="fw-"], h5[class
 /* Explicitly scale heading sizes slightly larger so they look somewhat big, grand, and legible */
 h1, .h1 {
     font-family: 'Poppins', sans-serif !important;
-    font-weight: 600 !important;
+    font-weight: 500 !important;
     font-size: 72px !important;
     line-height: 1.2 !important;
 }
