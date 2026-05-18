@@ -85,8 +85,14 @@ h1[class*="fw-"], h2[class*="fw-"], h3[class*="fw-"], h4[class*="fw-"], h5[class
 .h1[class*="fw-"], .h2[class*="fw-"], .h3[class*="fw-"], .h4[class*="fw-"], .h5[class*="fw-"], .h6[class*="fw-"],
 [class*="display-"][class*="fw-"] {
     font-family: 'Poppins', sans-serif !important;
-    font-weight: 500 !important; /* Strictly below 600 */
+    font-weight: 500 !important; /* Keep h2 and others at 500 */
     color: var(--primary);
+}
+
+/* Global Heading weight override for h1 elements */
+h1, .h1, .hero-title,
+h1[class*="fw-"], .h1[class*="fw-"] {
+    font-weight: 600 !important; /* Keep h1 at 600 */
 }
 
 /* Explicitly scale heading sizes slightly larger so they look somewhat big, grand, and legible */
