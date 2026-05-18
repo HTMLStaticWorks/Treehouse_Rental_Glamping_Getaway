@@ -8,8 +8,8 @@
     --secondary: #a68b70;
     --accent: #e5b358;
     --dark: #f1f1f1;
-    --light: #1e221e;
-    --white: #121412;
+    --light: #161616;      /* Premium dark grey for alternate sections/elements */
+    --white: #000000;      /* Pure black background for base page layout */
     --gray: #adb5bd;
     --glass: rgba(255, 255, 255, 0.05);
     --glass-dark: rgba(0, 0, 0, 0.4);
@@ -48,12 +48,18 @@
 }
 
 [data-theme="dark"] .navbar.scrolled:not(.bg-primary) {
-    /* Dark frosted glass instead of white */
-    background: rgba(14, 17, 14, 0.95) !important;
+    /* Pure black glassmorphism instead of white */
+    background: rgba(0, 0, 0, 0.95) !important;
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 2px 20px rgba(0,0,0,0.4);
+    box-shadow: 0 2px 20px rgba(0,0,0,0.6);
+}
+
+/* Remove black line/shadow under solid brand green navbar in dark mode */
+[data-theme="dark"] .navbar.bg-primary {
+    box-shadow: none !important;
+    border-bottom: none !important;
 }
 
 /* In dark mode, scrolled links stay white — no dark-text override */
@@ -79,9 +85,6 @@
 
 /* =============================================
    DARK MODE — HEADING & TEXT CONTRAST
-   All headings use var(--primary) = #2d5a48 which is
-   dark green — near-invisible on dark backgrounds.
-   Override to light in dark mode.
    ============================================= */
 
 [data-theme="dark"] h1,
@@ -116,23 +119,23 @@
 
 /* ── Cabin card dark mode ── */
 [data-theme="dark"] .cabin-card {
-    background-color: #1e2620;
-    border: 1px solid rgba(255, 255, 255, 0.07);
+    background-color: var(--light);
+    border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 [data-theme="dark"] .cabin-body {
-    background-color: #1e2620;
+    background-color: var(--light);
 }
 
 /* Title: crisp near-white, not dark green */
 [data-theme="dark"] .cabin-body h4 {
-    color: #dfeae1 !important;
+    color: #ffffff !important;
 }
 
 /* Description: readable mid-light */
 [data-theme="dark"] .cabin-body p,
 [data-theme="dark"] .cabin-body p.text-muted {
-    color: #a8b8ac !important;
+    color: #a0aab4 !important;
 }
 
 /* Price: keep warm gold/amber for visual interest */
@@ -141,55 +144,60 @@
 }
 
 [data-theme="dark"] .cabin-card:hover {
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-    border-color: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+    border-color: rgba(255, 255, 255, 0.15);
 }
 
 /* ── Booking search ── */
 [data-theme="dark"] .booking-search {
-    background-color: #1e2620;
-    border: 1px solid rgba(255, 255, 255, 0.07);
+    background-color: var(--light);
+    border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 [data-theme="dark"] .booking-search label {
-    color: #dfe8e0;
+    color: #ffffff;
 }
 
 /* ── Forms ── */
 [data-theme="dark"] .form-control,
 [data-theme="dark"] .form-select {
-    background-color: rgba(255, 255, 255, 0.05);
-    border-color: rgba(255, 255, 255, 0.12);
-    color: #f0f0f0;
+    background-color: rgba(255, 255, 255, 0.03);
+    border-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
 }
 
 [data-theme="dark"] .form-control::placeholder {
-    color: rgba(255, 255, 255, 0.35);
+    color: rgba(255, 255, 255, 0.4);
+}
+
+[data-theme="dark"] input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1) !important;
+    cursor: pointer;
 }
 
 [data-theme="dark"] .form-control:focus {
-    background-color: rgba(255, 255, 255, 0.09);
+    background-color: rgba(255, 255, 255, 0.06);
     border-color: var(--accent);
-    color: #f0f0f0;
+    color: #ffffff;
     box-shadow: 0 0 0 3px rgba(229, 179, 88, 0.15);
 }
 
 [data-theme="dark"] .form-label {
-    color: #c8d5cb;
+    color: #adb5bd;
 }
 
 /* ── General card / section bg ── */
 [data-theme="dark"] .card {
-    background-color: #1e2620;
-    border-color: rgba(255,255,255,0.07);
-    color: #e0e8e2;
+    background-color: var(--light);
+    border-color: rgba(255, 255, 255, 0.08);
+    color: #ffffff;
 }
 
 [data-theme="dark"] .card h3,
 [data-theme="dark"] .card h4,
 [data-theme="dark"] .card h5,
 [data-theme="dark"] .card h6 {
-    color: #e8f0ea;
+    color: #ffffff;
 }
 
 [data-theme="dark"] .card .text-muted,
@@ -199,12 +207,12 @@
 
 /* ── bg-light sections turn dark ── */
 [data-theme="dark"] .bg-light {
-    background-color: #17201a !important;
+    background-color: var(--light) !important;
 }
 
 [data-theme="dark"] .bg-light h2,
 [data-theme="dark"] .bg-light h5 {
-    color: #e8f0ea;
+    color: #ffffff;
 }
 
 [data-theme="dark"] .bg-light p,
@@ -212,10 +220,17 @@
     color: #a0aab4 !important;
 }
 
+/* Reciprocal Contrast: Cards nested inside dark grey alternate sections must be black to stand out */
+[data-theme="dark"] .bg-light .card {
+    background-color: var(--white) !important; /* Pure Black */
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5) !important;
+}
+
 /* ── Footer ── */
 [data-theme="dark"] .footer {
-    background-color: #0a0e0b;
-    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    background-color: var(--white);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
     color: rgba(255, 255, 255, 0.7);
 }
 
@@ -231,25 +246,25 @@
 
 /* ── Hero overlay (darker for more text contrast) ── */
 [data-theme="dark"] .hero-overlay {
-    background: linear-gradient(to right, rgba(0,0,0,0.85), rgba(0,0,0,0.55));
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6));
 }
 
 /* ── Accordion (FAQ) ── */
 [data-theme="dark"] .accordion-item {
-    background-color: #1e2620;
-    border-color: rgba(255, 255, 255, 0.07);
-    color: #e0e8e2;
+    background-color: var(--light);
+    border-color: rgba(255, 255, 255, 0.08);
+    color: #ffffff;
 }
 
 [data-theme="dark"] .accordion-button {
-    background-color: #1e2620;
-    color: #e8f0ea;
+    background-color: var(--light);
+    color: #ffffff;
 }
 
 [data-theme="dark"] .accordion-button:not(.collapsed) {
     background-color: rgba(229, 179, 88, 0.1);
     color: var(--accent);
-    box-shadow: inset 0 calc(-1 * var(--bs-accordion-border-width)) 0 rgba(255,255,255,0.07);
+    box-shadow: inset 0 calc(-1 * var(--bs-accordion-border-width)) 0 rgba(255, 255, 255, 0.08);
 }
 
 [data-theme="dark"] .accordion-button::after {
@@ -261,6 +276,34 @@
 }
 
 [data-theme="dark"] .accordion-body {
-    background-color: #1e2620;
+    background-color: var(--light);
     color: #a0aab4;
+}
+
+/* ── Dark Mode Link & text-primary Color Overrides ── */
+[data-theme="dark"] .text-primary {
+    color: var(--accent) !important; /* Premium Gold for links / icons in dark mode */
+}
+
+[data-theme="dark"] .text-primary:hover {
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] a:not(.btn):not(.nav-link):not(.navbar-brand) {
+    color: var(--accent);
+}
+
+[data-theme="dark"] a:not(.btn):not(.nav-link):not(.navbar-brand):hover {
+    color: #ffffff;
+}
+
+/* ── Journey Section Dark Mode Contrast ── */
+[data-theme="dark"] .journey-badge {
+    background-color: var(--light) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5) !important;
+}
+
+[data-theme="dark"] .journey-image {
+    filter: brightness(0.85) contrast(1.05) !important;
 }

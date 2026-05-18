@@ -6,53 +6,71 @@
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Sticky Navbar Effect
     const navbar = document.querySelector('.navbar');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-    });
+    if (navbar) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    }
 
-    // 2. Dark Mode Toggle
-    const themeToggle = document.getElementById('theme-toggle');
-    const body = document.body;
-    
-    // Check for saved theme
+    // 2. Dark Mode & RTL Toggles (Delegated Event Listeners for Bulletproof Execution)
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
-        body.setAttribute('data-theme', savedTheme);
+        document.documentElement.setAttribute('data-theme', savedTheme);
         updateThemeIcon(savedTheme);
     }
 
-    if (themeToggle) {
-        themeToggle.addEventListener('click', () => {
-            const currentTheme = body.getAttribute('data-theme');
+    const savedDir = localStorage.getItem('dir');
+    if (savedDir) {
+        document.documentElement.setAttribute('dir', savedDir);
+        updateRtlIcon(savedDir);
+    } else {
+        updateRtlIcon('ltr');
+    }
+
+    document.addEventListener('click', (e) => {
+        const themeBtn = e.target.closest('#theme-toggle');
+        if (themeBtn) {
+            e.preventDefault();
+            const htmlEl = document.documentElement;
+            const currentTheme = htmlEl.getAttribute('data-theme') || 'light';
             const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            body.setAttribute('data-theme', newTheme);
+            htmlEl.setAttribute('data-theme', newTheme);
             localStorage.setItem('theme', newTheme);
             updateThemeIcon(newTheme);
-        });
-    }
+        }
+
+        const rtlBtn = e.target.closest('#rtl-toggle');
+        if (rtlBtn) {
+            e.preventDefault();
+            const htmlEl = document.documentElement;
+            const currentDir = htmlEl.getAttribute('dir') || 'ltr';
+            const newDir = currentDir === 'rtl' ? 'ltr' : 'rtl';
+            htmlEl.setAttribute('dir', newDir);
+            localStorage.setItem('dir', newDir);
+            updateRtlIcon(newDir);
+        }
+    });
 
     function updateThemeIcon(theme) {
-        const icon = themeToggle.querySelector('i');
-        if (theme === 'dark') {
-            icon.classList.replace('bi-moon-stars', 'bi-sun');
-        } else {
-            icon.classList.replace('bi-sun', 'bi-moon-stars');
-        }
-    }
-
-    // 3. RTL Toggle
-    const rtlToggle = document.getElementById('rtl-toggle');
-    if (rtlToggle) {
-        rtlToggle.addEventListener('click', () => {
-            const currentDir = document.documentElement.getAttribute('dir');
-            const newDir = currentDir === 'rtl' ? 'ltr' : 'rtl';
-            document.documentElement.setAttribute('dir', newDir);
+        document.querySelectorAll('#theme-toggle i').forEach(icon => {
+            if (theme === 'dark') {
+                icon.className = 'bi bi-sun';
+            } else {
+                icon.className = 'bi bi-moon-stars';
+            }
         });
     }
+
+    function updateRtlIcon(dir) {
+        document.querySelectorAll('#rtl-toggle i').forEach(icon => {
+            icon.className = 'bi bi-arrow-left-right';
+        });
+    }
+
 
     // 4. Counter Animation
     const counters = document.querySelectorAll('.counter');

@@ -12,6 +12,7 @@
     font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* ── Navbar Alignment and Spacing ── */
 [dir="rtl"] .ms-auto {
     margin-right: auto !important;
     margin-left: 0 !important;
@@ -22,12 +23,87 @@
     margin-right: 0 !important;
 }
 
+[dir="rtl"] .ms-lg-2 {
+    margin-left: 0.5rem !important;
+    margin-right: 0 !important;
+}
+
+[dir="rtl"] .ms-lg-3 {
+    margin-left: 1rem !important;
+    margin-right: 0 !important;
+}
+
 [dir="rtl"] .navbar-brand {
     flex-direction: row-reverse;
 }
 
+/* ── Hero section overlay direction ── */
 [dir="rtl"] .hero-overlay {
     background: linear-gradient(to left, rgba(0,0,0,0.7), rgba(0,0,0,0.3));
+}
+
+/* ── Arrow mirroring ── */
+[dir="rtl"] .bi-arrow-right {
+    transform: scaleX(-1);
+    display: inline-block;
+}
+
+/* ── Footer Alignment and Spacing ── */
+[dir="rtl"] .footer .col-lg-4:first-child {
+    text-align: right !important;
+}
+
+[dir="rtl"] .footer .navbar-brand {
+    display: inline-flex !important;
+    justify-content: flex-start !important;
+    margin-left: auto !important;
+    margin-right: 0 !important;
+}
+
+[dir="rtl"] .footer p {
+    direction: ltr; /* English text flows LTR to keep punctuation like periods on the right */
+}
+
+[dir="rtl"] .footer p.opacity-75:not(.mb-0) {
+    text-align: right !important;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+
+@media (min-width: 992px) {
+    [dir="rtl"] .footer p.opacity-75:not(.mb-0) {
+        padding-left: 3rem !important;
+    }
+}
+
+[dir="rtl"] .footer p.mb-0 {
+    text-align: center; /* Center aligns bottom copyright */
+}
+
+/* Perfectly align the social media icons container to the right margin in RTL (maintaining standard LTR layout) */
+[dir="rtl"] .footer .d-flex {
+    direction: ltr !important;
+    display: flex !important;
+    justify-content: flex-end !important; /* pushes the group of icons to the right edge */
+    margin-left: auto !important;
+    margin-right: 0 !important;
+    gap: 0.5rem !important; /* reduced gap slightly for RTL footer social icons */
+}
+
+[dir="rtl"] .footer .d-flex a {
+    display: inline-flex !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important; /* remove manual margin-right to avoid double spacing */
+}
+
+[dir="rtl"] .footer .d-flex a:last-child {
+    margin-right: 0 !important;
+}
+
+[dir="rtl"] .newsletter-group .form-control {
+    padding-right: 20px;
+    padding-left: 0;
+    text-align: right;
 }
 
 [dir="rtl"] .footer-links a:hover {
@@ -38,4 +114,103 @@
 [dir="rtl"] .btn i {
     margin-right: 0;
     margin-left: 8px;
+}
+
+/* ── Journey Section RTL Perfect Alignment ── */
+[dir="rtl"] .journey-section h2,
+[dir="rtl"] .journey-section p,
+[dir="rtl"] .journey-section h5,
+[dir="rtl"] .journey-section h6 {
+    direction: ltr !important;
+    text-align: right !important;
+}
+
+[dir="rtl"] .journey-section ul {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+
+[dir="rtl"] .journey-section li {
+    direction: ltr !important;
+    text-align: right !important;
+}
+
+[dir="rtl"] .journey-section li h3 {
+    margin-right: 1.5rem !important; /* clean space separating year from content */
+    margin-left: 0 !important;
+    text-align: right !important;
+}
+
+/* Move image column fully to the left side in RTL by reversing the offset margin */
+[dir="rtl"] .journey-section .offset-lg-1 {
+    margin-left: 0 !important;
+    margin-right: 8.333333% !important;
+}
+
+/* ── Journey Badge RTL Alignment ── */
+[dir="rtl"] .journey-badge {
+    left: auto !important;
+    right: 20px !important;
+}
+
+@media (min-width: 1200px) {
+    [dir="rtl"] .journey-badge {
+        left: auto !important;
+        right: 0 !important;
+        transform: translateX(50%) !important;
+    }
+}
+
+/* ── FAQ Section RTL Perfect Alignment ── */
+[dir="rtl"] .faq-section h6,
+[dir="rtl"] .faq-section h2 {
+    direction: ltr !important;
+    text-align: center !important;
+}
+
+[dir="rtl"] .faq-section .accordion-button {
+    direction: ltr !important;
+    flex-direction: row-reverse !important;
+    text-align: right !important;
+    justify-content: space-between !important;
+}
+
+[dir="rtl"] .faq-section .accordion-button::after {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+[dir="rtl"] .faq-section .accordion-body {
+    direction: ltr !important;
+    text-align: right !important;
+}
+
+/* ── RTL Input Group Rounded Corners Fix ── */
+[dir="rtl"] .input-group > :not(:first-child) {
+    border-top-left-radius: 12px !important;
+    border-bottom-left-radius: 12px !important;
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+
+[dir="rtl"] .input-group > :not(:last-child) {
+    border-top-right-radius: 12px !important;
+    border-bottom-right-radius: 12px !important;
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+}
+
+/* ── RTL Newsletter Group Capsule Fix ── */
+[dir="rtl"] .newsletter-group > :not(:first-child) {
+    border-top-left-radius: 50px !important;
+    border-bottom-left-radius: 50px !important;
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+
+[dir="rtl"] .newsletter-group > :not(:last-child) {
+    border-top-right-radius: 50px !important;
+    border-bottom-right-radius: 50px !important;
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
 }

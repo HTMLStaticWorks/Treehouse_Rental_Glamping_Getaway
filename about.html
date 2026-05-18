@@ -16,13 +16,21 @@
     <meta name="description" content="Discover the story behind Arboria, our commitment to sustainable luxury, and the vision for our treehouse retreats.">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/dark-mode.css">
-    <link rel="stylesheet" href="assets/css/rtl.css">
+    <link rel="stylesheet" href="assets/css/style.css?v=11">
+    <link rel="stylesheet" href="assets/css/dark-mode.css?v=11">
+    <link rel="stylesheet" href="assets/css/rtl.css?v=11">
     <link rel="preload" as="image" href="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=600">
     <link rel="preload" as="image" href="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&q=80&w=800">
     <link rel="preload" as="image" href="https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&q=80&w=800">
     <style>
+        /* Remove black line/shadow under brand green navbar in dark mode */
+        [data-theme="dark"] .navbar,
+        [data-theme="dark"] .navbar.bg-primary,
+        [data-theme="dark"] .navbar.scrolled {
+            box-shadow: none !important;
+            border-bottom: none !important;
+        }
+
         .about-hero {
             height: 60vh;
             min-height: 400px;
@@ -40,6 +48,51 @@
         }
         .img-fade {
             animation: imgFadeIn 0.6s ease forwards;
+        }
+
+        /* ── Journey Section RTL Perfect Alignment ── */
+        [dir="rtl"] .journey-section h2,
+        [dir="rtl"] .journey-section p,
+        [dir="rtl"] .journey-section h5,
+        [dir="rtl"] .journey-section h6 {
+            direction: ltr !important;
+            text-align: right !important;
+        }
+
+        [dir="rtl"] .journey-section ul {
+            padding-right: 0 !important;
+            padding-left: 0 !important;
+        }
+
+        [dir="rtl"] .journey-section li {
+            direction: ltr !important;
+            text-align: right !important;
+        }
+
+        [dir="rtl"] .journey-section li h3 {
+            margin-right: 1.5rem !important; /* clean space separating year from content */
+            margin-left: 0 !important;
+            text-align: right !important;
+        }
+
+        /* Move image column fully to the left side in RTL by reversing the offset margin */
+        [dir="rtl"] .journey-section .offset-lg-1 {
+            margin-left: 0 !important;
+            margin-right: 8.333333% !important;
+        }
+
+        /* ── Journey Badge RTL Alignment ── */
+        [dir="rtl"] .journey-badge {
+            left: auto !important;
+            right: 20px !important;
+        }
+
+        @media (min-width: 1200px) {
+            [dir="rtl"] .journey-badge {
+                left: auto !important;
+                right: 0 !important;
+                transform: translateX(50%) !important;
+            }
         }
     </style>
 </head>
@@ -66,7 +119,7 @@
                         </li>
                         <li class="nav-item">
                             <button id="rtl-toggle" class="btn btn-link p-0 nav-link">
-                                <i class="bi bi-translate"></i>
+                                <i class="bi bi-arrow-left-right"></i>
                             </button>
                         </li>
                         <li class="nav-item ms-lg-3">
@@ -201,7 +254,7 @@
         </div>
     </section>
 
-    <section class="py-5">
+    <section class="py-5 journey-section">
         <div class="container py-5">
             <div class="row align-items-center">
                 <div class="col-lg-5 mb-5 mb-lg-0">
@@ -234,7 +287,7 @@
                 </div>
                 <div class="col-lg-6 offset-lg-1">
                     <div class="position-relative">
-                        <img src="https://images.unsplash.com/photo-1542718610-a1d656d1884c?auto=format&fit=crop&q=80&w=800" class="img-fluid rounded-4 shadow-lg" alt="Construction">
+                        <img src="https://images.unsplash.com/photo-1542718610-a1d656d1884c?auto=format&fit=crop&q=80&w=800" class="img-fluid rounded-4 shadow-lg journey-image" alt="Construction">
                         <div class="journey-badge bg-white p-4 rounded-4 shadow-lg d-none d-md-block">
                             <h3 class="text-primary fw-bold mb-0 display-6">50K+</h3>
                             <p class="text-muted fw-bold mb-0">Trees Planted</p>
@@ -297,7 +350,7 @@
                     <h5>Newsletter</h5>
                     <p class="opacity-75">Subscribe to get the latest updates and exclusive offers.</p>
                     <form class="mt-4">
-                        <div class="input-group">
+                        <div class="input-group newsletter-group">
                             <input type="email" class="form-control" placeholder="Email address">
                             <button class="btn btn-primary" type="button">Subscribe</button>
                         </div>
