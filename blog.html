@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Anti-FOUC: apply saved theme/RTL before first paint -->
     <script>
-        (function() {
+        (function () {
             var t = localStorage.getItem('theme');
             if (t) document.documentElement.setAttribute('data-theme', t);
             var d = localStorage.getItem('dir');
@@ -33,17 +34,23 @@
         }
     </style>
 </head>
+
 <body>
     <nav class="navbar navbar-expand-xl fixed-top navbar-dark bg-primary">
         <div class="container">
-            <a class="navbar-brand" href="index.html"><i class="bi bi-tree-fill text-accent"></i><span>ARBORIA</span></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"><span class="navbar-toggler-icon"></span></button>
+            <a class="navbar-brand" href="index.html"><i
+                    class="bi bi-tree-fill text-accent"></i><span>ARBORIA</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar"><span class="navbar-toggler-icon"></span></button>
             <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar">
-                <div class="offcanvas-header"><h5 class="offcanvas-title">Menu</h5><button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button></div>
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title">Menu</h5><button type="button" class="btn-close btn-close-white"
+                        data-bs-dismiss="offcanvas"></button>
+                </div>
                 <div class="offcanvas-body">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
                         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
+                        <li class="nav-item"><a class="nav-link" href="home-2.html">Home2</a></li>
                         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="experiences.html">Services</a></li>
                         <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
@@ -86,13 +93,19 @@
             <div class="card border-0 shadow-lg rounded-4 overflow-hidden">
                 <div class="row g-0">
                     <div class="col-md-6">
-                        <img src="https://images.unsplash.com/photo-1542718610-a1d656d1884c?auto=format&fit=crop&q=80&w=1200" class="img-fluid h-100 object-fit-cover" alt="Featured Architecture" style="min-height: 400px; object-fit: cover;">
+                        <img src="https://images.unsplash.com/photo-1542718610-a1d656d1884c?auto=format&fit=crop&q=80&w=1200"
+                            class="img-fluid h-100 object-fit-cover" alt="Featured Architecture"
+                            style="min-height: 400px; object-fit: cover;">
                     </div>
                     <div class="col-md-6 d-flex align-items-center">
                         <div class="card-body p-lg-5 p-4">
-                            <div class="mb-2"><span class="badge bg-arboria text-white text-uppercase py-2 px-3 fw-bold" style="font-size: 0.7rem; letter-spacing: 1px;">Featured • May 12, 2026</span></div>
-                            <h2 class="card-title display-6 fw-bold mb-3">The Architecture of Treehouses: Blending In</h2>
-                            <p class="text-muted mb-4">An exclusive interview with our lead architect on how we designed luxury cabins that adapt to the natural sway of the trees, minimizing our footprint while maximizing comfort...</p>
+                            <div class="mb-2"><span class="badge bg-arboria text-white text-uppercase py-2 px-3 fw-bold"
+                                    style="font-size: 0.7rem; letter-spacing: 1px;">Featured • May 12, 2026</span></div>
+                            <h2 class="card-title display-6 fw-bold mb-3">The Architecture of Treehouses: Blending In
+                            </h2>
+                            <p class="text-muted mb-4">An exclusive interview with our lead architect on how we designed
+                                luxury cabins that adapt to the natural sway of the trees, minimizing our footprint
+                                while maximizing comfort...</p>
                             <a href="blog-details.html" class="btn btn-primary">Read Full Story</a>
                         </div>
                     </div>
@@ -109,36 +122,56 @@
                 <!-- Blog 1 -->
                 <div class="col-lg-4 col-md-6">
                     <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100">
-                        <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&q=80&w=800" class="card-img-top" style="height: 250px; object-fit: cover;">
+                        <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&q=80&w=800"
+                            class="card-img-top" style="height: 250px; object-fit: cover;">
                         <div class="card-body p-4">
-                            <div class="mb-2"><span class="badge bg-arboria text-white text-uppercase py-2 px-3 fw-bold" style="font-size: 0.7rem; letter-spacing: 1px;">Eco-Travel • May 10, 2026</span></div>
-                            <h4 class="card-title mb-3"><a href="blog-details.html" class="text-decoration-none">Sustainable Luxury: How We Protect the Canopy</a></h4>
-                            <p class="text-muted small">Discover the innovative architectural techniques we use to build without harming our forest home...</p>
-                            <a href="blog-details.html" class="text-primary fw-bold text-decoration-none small d-inline-flex align-items-center mt-2">Read More <i class="bi bi-arrow-right ms-2"></i></a>
+                            <div class="mb-2"><span class="badge bg-arboria text-white text-uppercase py-2 px-3 fw-bold"
+                                    style="font-size: 0.7rem; letter-spacing: 1px;">Eco-Travel • May 10, 2026</span>
+                            </div>
+                            <h4 class="card-title mb-3"><a href="blog-details.html"
+                                    class="text-decoration-none">Sustainable Luxury: How We Protect the Canopy</a></h4>
+                            <p class="text-muted small">Discover the innovative architectural techniques we use to build
+                                without harming our forest home...</p>
+                            <a href="blog-details.html"
+                                class="text-primary fw-bold text-decoration-none small d-inline-flex align-items-center mt-2">Read
+                                More <i class="bi bi-arrow-right ms-2"></i></a>
                         </div>
                     </div>
                 </div>
                 <!-- Blog 2 -->
                 <div class="col-lg-4 col-md-6">
                     <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100">
-                        <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&q=80&w=800" class="card-img-top" style="height: 250px; object-fit: cover;">
+                        <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&q=80&w=800"
+                            class="card-img-top" style="height: 250px; object-fit: cover;">
                         <div class="card-body p-4">
-                            <div class="mb-2"><span class="badge bg-arboria text-white text-uppercase py-2 px-3 fw-bold" style="font-size: 0.7rem; letter-spacing: 1px;">Wellness • May 05, 2026</span></div>
-                            <h4 class="card-title mb-3"><a href="blog-details.html" class="text-decoration-none">The Healing Power of Forest Bathing</a></h4>
-                            <p class="text-muted small">Science confirms what we've always known: spending time among trees has profound benefits for the mind...</p>
-                            <a href="blog-details.html" class="text-primary fw-bold text-decoration-none small d-inline-flex align-items-center mt-2">Read More <i class="bi bi-arrow-right ms-2"></i></a>
+                            <div class="mb-2"><span class="badge bg-arboria text-white text-uppercase py-2 px-3 fw-bold"
+                                    style="font-size: 0.7rem; letter-spacing: 1px;">Wellness • May 05, 2026</span></div>
+                            <h4 class="card-title mb-3"><a href="blog-details.html" class="text-decoration-none">The
+                                    Healing Power of Forest Bathing</a></h4>
+                            <p class="text-muted small">Science confirms what we've always known: spending time among
+                                trees has profound benefits for the mind...</p>
+                            <a href="blog-details.html"
+                                class="text-primary fw-bold text-decoration-none small d-inline-flex align-items-center mt-2">Read
+                                More <i class="bi bi-arrow-right ms-2"></i></a>
                         </div>
                     </div>
                 </div>
                 <!-- Blog 3 -->
                 <div class="col-lg-4 col-md-6">
                     <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100">
-                        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=800" class="card-img-top" style="height: 250px; object-fit: cover;">
+                        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=800"
+                            class="card-img-top" style="height: 250px; object-fit: cover;">
                         <div class="card-body p-4">
-                            <div class="mb-2"><span class="badge bg-arboria text-white text-uppercase py-2 px-3 fw-bold" style="font-size: 0.7rem; letter-spacing: 1px;">Adventure • Apr 28, 2026</span></div>
-                            <h4 class="card-title mb-3"><a href="blog-details.html" class="text-decoration-none">Top 5 Hidden Trails Around Arboria</a></h4>
-                            <p class="text-muted small">From secret waterfalls to panoramic ridge views, here are our favorite treks for every skill level...</p>
-                            <a href="blog-details.html" class="text-primary fw-bold text-decoration-none small d-inline-flex align-items-center mt-2">Read More <i class="bi bi-arrow-right ms-2"></i></a>
+                            <div class="mb-2"><span class="badge bg-arboria text-white text-uppercase py-2 px-3 fw-bold"
+                                    style="font-size: 0.7rem; letter-spacing: 1px;">Adventure • Apr 28, 2026</span>
+                            </div>
+                            <h4 class="card-title mb-3"><a href="blog-details.html" class="text-decoration-none">Top 5
+                                    Hidden Trails Around Arboria</a></h4>
+                            <p class="text-muted small">From secret waterfalls to panoramic ridge views, here are our
+                                favorite treks for every skill level...</p>
+                            <a href="blog-details.html"
+                                class="text-primary fw-bold text-decoration-none small d-inline-flex align-items-center mt-2">Read
+                                More <i class="bi bi-arrow-right ms-2"></i></a>
                         </div>
                     </div>
                 </div>
@@ -153,7 +186,8 @@
             <div class="row g-3">
                 <div class="col-6 col-md-3">
                     <a href="#" class="card bg-dark text-white border-0 overflow-hidden rounded-4 text-decoration-none">
-                        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=400" class="card-img opacity-50" alt="Wellness" style="height: 120px; object-fit: cover;">
+                        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=400"
+                            class="card-img opacity-50" alt="Wellness" style="height: 120px; object-fit: cover;">
                         <div class="card-img-overlay d-flex align-items-center justify-content-center">
                             <h5 class="card-title mb-0 fw-bold text-white">Wellness</h5>
                         </div>
@@ -161,7 +195,8 @@
                 </div>
                 <div class="col-6 col-md-3">
                     <a href="#" class="card bg-dark text-white border-0 overflow-hidden rounded-4 text-decoration-none">
-                        <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&q=80&w=400" class="card-img opacity-50" alt="Adventure" style="height: 120px; object-fit: cover;">
+                        <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&q=80&w=400"
+                            class="card-img opacity-50" alt="Adventure" style="height: 120px; object-fit: cover;">
                         <div class="card-img-overlay d-flex align-items-center justify-content-center">
                             <h5 class="card-title mb-0 fw-bold text-white">Adventure</h5>
                         </div>
@@ -169,7 +204,8 @@
                 </div>
                 <div class="col-6 col-md-3">
                     <a href="#" class="card bg-dark text-white border-0 overflow-hidden rounded-4 text-decoration-none">
-                        <img src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&q=80&w=400" class="card-img opacity-50" alt="Architecture" style="height: 120px; object-fit: cover;">
+                        <img src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&q=80&w=400"
+                            class="card-img opacity-50" alt="Architecture" style="height: 120px; object-fit: cover;">
                         <div class="card-img-overlay d-flex align-items-center justify-content-center">
                             <h5 class="card-title mb-0 fw-bold text-white">Architecture</h5>
                         </div>
@@ -177,7 +213,8 @@
                 </div>
                 <div class="col-6 col-md-3">
                     <a href="#" class="card bg-dark text-white border-0 overflow-hidden rounded-4 text-decoration-none">
-                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=400" class="card-img opacity-50" alt="Gastronomy" style="height: 120px; object-fit: cover;">
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=400"
+                            class="card-img opacity-50" alt="Gastronomy" style="height: 120px; object-fit: cover;">
                         <div class="card-img-overlay d-flex align-items-center justify-content-center">
                             <h5 class="card-title mb-0 fw-bold text-white">Gastronomy</h5>
                         </div>
@@ -191,19 +228,24 @@
     <section class="py-5 bg-light mb-5">
         <div class="container text-center">
             <h3 class="mb-3 fw-bold">From the Community</h3>
-            <p class="text-muted mb-5">Follow our guests' experiences using <span class="text-accent fw-bold">#ArboriaRetreats</span></p>
+            <p class="text-muted mb-5">Follow our guests' experiences using <span
+                    class="text-accent fw-bold">#ArboriaRetreats</span></p>
             <div class="row g-2">
                 <div class="col-6 col-md-3">
-                    <img src="https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&q=80&w=400" class="img-fluid rounded-3 h-100 object-fit-cover" alt="Community 1" style="max-height: 250px;">
+                    <img src="https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&q=80&w=400"
+                        class="img-fluid rounded-3 h-100 object-fit-cover" alt="Community 1" style="max-height: 250px;">
                 </div>
                 <div class="col-6 col-md-3">
-                    <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=400" class="img-fluid rounded-3 h-100 object-fit-cover" alt="Community 2" style="max-height: 250px;">
+                    <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=400"
+                        class="img-fluid rounded-3 h-100 object-fit-cover" alt="Community 2" style="max-height: 250px;">
                 </div>
                 <div class="col-6 col-md-3">
-                    <img src="https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?auto=format&fit=crop&q=80&w=400" class="img-fluid rounded-3 h-100 object-fit-cover" alt="Community 3" style="max-height: 250px;">
+                    <img src="https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?auto=format&fit=crop&q=80&w=400"
+                        class="img-fluid rounded-3 h-100 object-fit-cover" alt="Community 3" style="max-height: 250px;">
                 </div>
                 <div class="col-6 col-md-3">
-                    <img src="https://images.unsplash.com/photo-1542718610-a1d656d1884c?auto=format&fit=crop&q=80&w=400" class="img-fluid rounded-3 h-100 object-fit-cover" alt="Community 4" style="max-height: 250px;">
+                    <img src="https://images.unsplash.com/photo-1542718610-a1d656d1884c?auto=format&fit=crop&q=80&w=400"
+                        class="img-fluid rounded-3 h-100 object-fit-cover" alt="Community 4" style="max-height: 250px;">
                 </div>
             </div>
         </div>
@@ -212,14 +254,19 @@
     <!-- Section 3: Newsletter Signup -->
     <section class="py-5 mb-5">
         <div class="container">
-            <div class="text-white rounded-4 p-5 text-center position-relative overflow-hidden shadow-lg" style="background-color: var(--primary);">
-                <div class="position-absolute top-0 start-0 w-100 h-100" style="background: url('https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&q=80&w=1200') center/cover; opacity: 0.15;"></div>
+            <div class="text-white rounded-4 p-5 text-center position-relative overflow-hidden shadow-lg"
+                style="background-color: var(--primary);">
+                <div class="position-absolute top-0 start-0 w-100 h-100"
+                    style="background: url('https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&q=80&w=1200') center/cover; opacity: 0.15;">
+                </div>
                 <div class="position-relative z-1 py-4">
                     <h2 class="mb-3 fw-bold text-white">Never Miss a Story</h2>
-                    <p class="lead mb-4 opacity-75 mx-auto text-white" style="max-width: 600px;">Join our community to receive curated tales of nature, wellness tips, and exclusive Arboria retreat offers.</p>
+                    <p class="lead mb-4 opacity-75 mx-auto text-white" style="max-width: 600px;">Join our community to
+                        receive curated tales of nature, wellness tips, and exclusive Arboria retreat offers.</p>
                     <form class="row justify-content-center">
                         <div class="col-md-8 col-lg-6 d-flex gap-2">
-                            <input type="email" class="form-control py-3 border-0 shadow-none" placeholder="Enter your email address">
+                            <input type="email" class="form-control py-3 border-0 shadow-none"
+                                placeholder="Enter your email address">
                             <button type="submit" class="btn btn-accent px-4 fw-bold">Subscribe</button>
                         </div>
                     </form>
@@ -236,11 +283,15 @@
                         <i class="bi bi-tree-fill text-accent"></i>
                         <span>ARBORIA</span>
                     </a>
-                    <p class="opacity-75 pe-lg-5">Escape to a world of tranquility and luxury. Arboria offers the most unique forest stays for those seeking peace and adventure.</p>
+                    <p class="opacity-75 pe-lg-5">Escape to a world of tranquility and luxury. Arboria offers the most
+                        unique forest stays for those seeking peace and adventure.</p>
                     <div class="d-flex gap-3 mt-4">
-                        <a href="#" class="btn btn-sm btn-outline-light rounded-circle"><i class="bi bi-facebook"></i></a>
-                        <a href="#" class="btn btn-sm btn-outline-light rounded-circle"><i class="bi bi-instagram"></i></a>
-                        <a href="#" class="btn btn-sm btn-outline-light rounded-circle"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="btn btn-sm btn-outline-light rounded-circle"><i
+                                class="bi bi-facebook"></i></a>
+                        <a href="#" class="btn btn-sm btn-outline-light rounded-circle"><i
+                                class="bi bi-instagram"></i></a>
+                        <a href="#" class="btn btn-sm btn-outline-light rounded-circle"><i
+                                class="bi bi-twitter-x"></i></a>
                     </div>
                 </div>
                 <div class="col-md-4 col-lg-2">
@@ -285,4 +336,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
+
 </html>

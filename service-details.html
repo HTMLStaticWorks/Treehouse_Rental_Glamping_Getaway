@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr" data-theme="light">
+
 <head>
     <!-- Anti-FOUC: apply saved theme/RTL before first paint -->
     <script>
-        (function() {
+        (function () {
             var t = localStorage.getItem('theme');
             if (t) document.documentElement.setAttribute('data-theme', t);
             var d = localStorage.getItem('dir');
@@ -14,20 +15,23 @@
     <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Cedar Nest - Service Details | Treetops Treehouse Rental</title>
-    
+
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Discover the details of The Cedar Nest luxury treehouse. High in the canopy with 5-star amenities.">
-    
+    <meta name="description"
+        content="Discover the details of The Cedar Nest luxury treehouse. High in the canopy with 5-star amenities.">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css?v=11">
     <link rel="stylesheet" href="assets/css/dark-mode.css?v=11">
@@ -38,29 +42,44 @@
             color: var(--primary);
             margin-bottom: 10px;
         }
+
         .calendar-placeholder {
             background: var(--bg-card);
             border-radius: var(--border-radius);
             padding: 20px;
             box-shadow: var(--shadow);
         }
+
         .calendar-grid {
             display: grid;
             grid-template-columns: repeat(7, 1fr);
             gap: 5px;
             text-align: center;
         }
+
         .calendar-day {
             padding: 10px;
             border-radius: 10px;
             cursor: pointer;
             transition: var(--transition);
         }
-        .calendar-day:hover { background: var(--glass-border); }
-        .calendar-day.selected { background: var(--accent); color: white; }
-        .calendar-day.disabled { opacity: 0.3; cursor: not-allowed; }
+
+        .calendar-day:hover {
+            background: var(--glass-border);
+        }
+
+        .calendar-day.selected {
+            background: var(--accent);
+            color: white;
+        }
+
+        .calendar-day.disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
     </style>
 </head>
+
 <body>
 
     <!-- Navbar -->
@@ -71,11 +90,13 @@
                 <span>ARBORIA</span>
             </a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
                 <div class="offcanvas-header">
                     <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
@@ -83,7 +104,7 @@
                 <div class="offcanvas-body">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
                         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
+                        <li class="nav-item"><a class="nav-link" href="home-2.html">Home2</a></li>
                         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                         <li class="nav-item"><a class="nav-link active" href="experiences.html">Services</a></li>
                         <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
@@ -117,11 +138,13 @@
             <div class="row g-5">
                 <!-- Image & Description -->
                 <div class="col-lg-8">
-                    <img src="https://images.unsplash.com/photo-1518732714860-b62714ce0c59?auto=format&fit=crop&q=80&w=1200" class="img-fluid rounded-5 shadow-lg mb-5" alt="Cedar Nest Large">
-                    
+                    <img src="https://images.unsplash.com/photo-1518732714860-b62714ce0c59?auto=format&fit=crop&q=80&w=1200"
+                        class="img-fluid rounded-5 shadow-lg mb-5" alt="Cedar Nest Large">
+
                     <h2 class="text-primary h1">The Cedar Nest</h2>
-                    <p class="lead">Perched 30 feet above the forest floor, The Cedar Nest offers an unparalleled connection to nature without sacrificing luxury.</p>
-                    
+                    <p class="lead">Perched 30 feet above the forest floor, The Cedar Nest offers an unparalleled
+                        connection to nature without sacrificing luxury.</p>
+
                     <div class="my-5">
                         <h4 class="mb-4">Included Amenities</h4>
                         <div class="row g-4">
@@ -169,25 +192,31 @@
                         <div class="accordion" id="faqAccordion">
                             <div class="accordion-item glass-card mb-2 border-0">
                                 <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed bg-transparent text-main fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                    <button class="accordion-button collapsed bg-transparent text-main fw-bold"
+                                        type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
                                         Is there an age limit for guests?
                                     </button>
                                 </h2>
-                                <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div id="collapseOne" class="accordion-collapse collapse"
+                                    data-bs-parent="#faqAccordion">
                                     <div class="accordion-body opacity-75">
-                                        Due to the height and nature of the access stairs, guests must be at least 12 years old for The Cedar Nest.
+                                        Due to the height and nature of the access stairs, guests must be at least 12
+                                        years old for The Cedar Nest.
                                     </div>
                                 </div>
                             </div>
                             <div class="accordion-item glass-card mb-2 border-0">
                                 <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed bg-transparent text-main fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                    <button class="accordion-button collapsed bg-transparent text-main fw-bold"
+                                        type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
                                         Are pets allowed?
                                     </button>
                                 </h2>
-                                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div id="collapseTwo" class="accordion-collapse collapse"
+                                    data-bs-parent="#faqAccordion">
                                     <div class="accordion-body opacity-75">
-                                        We love animals, but for the safety of our wildlife, pets are not allowed in the treehouses.
+                                        We love animals, but for the safety of our wildlife, pets are not allowed in the
+                                        treehouses.
                                     </div>
                                 </div>
                             </div>
@@ -199,15 +228,34 @@
                 <div class="col-lg-4">
                     <div class="sticky-top" style="top: 100px;">
                         <div class="glass-card p-4">
-                            <h3 class="text-primary mb-3">$250 <span class="fs-6 text-muted fw-normal">/ night</span></h3>
+                            <h3 class="text-primary mb-3">$250 <span class="fs-6 text-muted fw-normal">/ night</span>
+                            </h3>
                             <hr>
                             <div class="calendar-placeholder mb-4">
                                 <h5 class="mb-3">Availability</h5>
                                 <div class="calendar-grid">
-                                    <div class="small fw-bold">S</div><div class="small fw-bold">M</div><div class="small fw-bold">T</div><div class="small fw-bold">W</div><div class="small fw-bold">T</div><div class="small fw-bold">F</div><div class="small fw-bold">S</div>
+                                    <div class="small fw-bold">S</div>
+                                    <div class="small fw-bold">M</div>
+                                    <div class="small fw-bold">T</div>
+                                    <div class="small fw-bold">W</div>
+                                    <div class="small fw-bold">T</div>
+                                    <div class="small fw-bold">F</div>
+                                    <div class="small fw-bold">S</div>
                                     <!-- Simple grid placeholder -->
-                                    <div class="calendar-day disabled">1</div><div class="calendar-day disabled">2</div><div class="calendar-day disabled">3</div><div class="calendar-day">4</div><div class="calendar-day">5</div><div class="calendar-day">6</div><div class="calendar-day">7</div>
-                                    <div class="calendar-day">8</div><div class="calendar-day selected">9</div><div class="calendar-day">10</div><div class="calendar-day">11</div><div class="calendar-day">12</div><div class="calendar-day">13</div><div class="calendar-day">14</div>
+                                    <div class="calendar-day disabled">1</div>
+                                    <div class="calendar-day disabled">2</div>
+                                    <div class="calendar-day disabled">3</div>
+                                    <div class="calendar-day">4</div>
+                                    <div class="calendar-day">5</div>
+                                    <div class="calendar-day">6</div>
+                                    <div class="calendar-day">7</div>
+                                    <div class="calendar-day">8</div>
+                                    <div class="calendar-day selected">9</div>
+                                    <div class="calendar-day">10</div>
+                                    <div class="calendar-day">11</div>
+                                    <div class="calendar-day">12</div>
+                                    <div class="calendar-day">13</div>
+                                    <div class="calendar-day">14</div>
                                 </div>
                             </div>
                             <a href="booking.html" class="btn btn-primary-custom w-100 btn-lg mb-3">Book This Stay</a>
@@ -228,11 +276,15 @@
                         <i class="bi bi-tree-fill text-accent"></i>
                         <span>ARBORIA</span>
                     </a>
-                    <p class="opacity-75 pe-lg-5">Escape to a world of tranquility and luxury. Arboria offers the most unique forest stays for those seeking peace and adventure.</p>
+                    <p class="opacity-75 pe-lg-5">Escape to a world of tranquility and luxury. Arboria offers the most
+                        unique forest stays for those seeking peace and adventure.</p>
                     <div class="d-flex gap-3 mt-4">
-                        <a href="#" class="btn btn-sm btn-outline-light rounded-circle"><i class="bi bi-facebook"></i></a>
-                        <a href="#" class="btn btn-sm btn-outline-light rounded-circle"><i class="bi bi-instagram"></i></a>
-                        <a href="#" class="btn btn-sm btn-outline-light rounded-circle"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="btn btn-sm btn-outline-light rounded-circle"><i
+                                class="bi bi-facebook"></i></a>
+                        <a href="#" class="btn btn-sm btn-outline-light rounded-circle"><i
+                                class="bi bi-instagram"></i></a>
+                        <a href="#" class="btn btn-sm btn-outline-light rounded-circle"><i
+                                class="bi bi-twitter-x"></i></a>
                     </div>
                 </div>
                 <div class="col-md-4 col-lg-2">
@@ -278,4 +330,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js?v=20260508"></script>
 </body>
+
 </html>
