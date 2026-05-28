@@ -91,17 +91,17 @@ h1[class*="fw-"], h2[class*="fw-"], h3[class*="fw-"], h4[class*="fw-"], h5[class
 /* Explicit heading and display title weights as requested */
 h1, .h1, .display-1, .display-2, .display-3, .display-4, .hero-title,
 h1[class*="fw-"], .h1[class*="fw-"], [class*="display-1"][class*="fw-"], [class*="display-2"][class*="fw-"], [class*="display-3"][class*="fw-"], [class*="display-4"][class*="fw-"] {
-    font-weight: 700 !important;
+    font-weight: 580 !important;
 }
 
 h2, .h2, .display-5,
 h2[class*="fw-"], .h2[class*="fw-"], [class*="display-5"][class*="fw-"] {
-    font-weight: 600 !important;
+    font-weight: 560 !important;
 }
 
 h3, .h3, .display-6,
 h3[class*="fw-"], .h3[class*="fw-"], [class*="display-6"][class*="fw-"] {
-    font-weight: 300 !important;
+    font-weight: 540 !important;
 }
 
 /* Maintain h4, h5, h6 headings elegant and readable */
@@ -153,16 +153,21 @@ h6, .h6 {
 }
 
 /* 2. Paragraphs & Subheadings - Maintain weights between 400 and 550 for better readability & hierarchy */
-p, li, .form-control, .form-select, .form-label, label, .small, small {
+p, li, .form-control, .form-select, .small, small {
     font-family: 'Inter', sans-serif;
     font-weight: 400 !important; /* Perfect base weight within 400-550 */
+}
+
+.form-label, label {
+    font-family: 'Inter', sans-serif;
+    font-weight: 480 !important;
 }
 
 .lead, .subheading, .subtitle,
 [class*="subheading"], [class*="subtitle"],
 .text-uppercase.fw-bold {
     font-family: 'Poppins', sans-serif !important;
-    font-weight: 500 !important; /* Premium transition weight between 400-550 */
+    font-weight: 480 !important; /* Premium transition weight between 400-550 */
 }
 
 /* Ensure strong / bold copy inside paragraphs/lists does not exceed 550 */
@@ -263,7 +268,7 @@ section {
     color: var(--white) !important;
     padding: 12px 30px;
     border-radius: var(--border-radius);
-    font-weight: 700;
+    font-weight: 510;
     transition: var(--transition);
 }
 
@@ -279,7 +284,7 @@ section {
     border-color: var(--primary);
     padding: 12px 30px;
     border-radius: var(--border-radius);
-    font-weight: 700;
+    font-weight: 510;
     transition: var(--transition);
 }
 
@@ -291,7 +296,7 @@ section {
 
 .btn-outline-light {
     border-width: 2px;
-    font-weight: 700;
+    font-weight: 510;
     transition: var(--transition);
 }
 
@@ -308,7 +313,7 @@ section {
     color: var(--white) !important;
     padding: 12px 30px;
     border-radius: var(--border-radius);
-    font-weight: 700;
+    font-weight: 510;
     transition: var(--transition);
 }
 
@@ -366,7 +371,7 @@ section {
 
 /* Nav links: always crisp white when transparent */
 .navbar .nav-link {
-    font-weight: 600;
+    font-weight: 480;
     color: #ffffff !important;
     text-shadow: 0 1px 4px rgba(0,0,0,0.5);
     margin: 0 8px;
@@ -630,7 +635,7 @@ section {
 
 .cabin-price {
     color: var(--secondary);
-    font-weight: 700;
+    font-weight: 520;
     font-size: 1.2rem;
 }
 
@@ -701,7 +706,7 @@ section {
     background-color: var(--accent);
     border-color: var(--accent);
     color: var(--primary) !important;
-    font-weight: 700;
+    font-weight: 510;
     padding: 10px 25px;
 }
 
