@@ -37,6 +37,26 @@
     color: var(--primary) !important;
 }
 
+[data-theme="dark"] .btn-outline-light {
+    color: #ffffff !important;
+    border-color: #ffffff !important;
+}
+
+[data-theme="dark"] .btn-outline-light:hover {
+    background-color: #ffffff !important;
+    color: var(--primary) !important; /* var(--primary) is dark green (#2d5a48) which contrasts well on white */
+}
+
+[data-theme="dark"] .navbar.scrolled:not(.bg-primary) .btn-outline-light {
+    color: #ffffff !important;
+    border-color: #ffffff !important;
+}
+
+[data-theme="dark"] .navbar.scrolled:not(.bg-primary) .btn-outline-light:hover {
+    background-color: #ffffff !important;
+    color: var(--primary) !important;
+}
+
 [data-theme="dark"] body {
     background-color: var(--white);
     color: var(--dark);
